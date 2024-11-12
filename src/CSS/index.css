@@ -1,4 +1,52 @@
+<<<<<<< HEAD
 .sliderOne{
     background-image: url("/Assets/Images/background-slider.jpg");
     width: 90%;
 }
+=======
+
+
+/* start header */
+.header-tools {
+    display: flex;
+}
+.burger-icon  {
+    display: none;
+}
+
+
+
+@media (min-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+   .header-tools {
+    display: none;
+   }
+
+   .links {
+    display: none;
+   }
+
+   .burger-icon  {
+    display: flex;
+    }
+    .burger-icon span {
+        border-radius: 2px;
+        height: 2px;
+        width: 100%;
+        background-color: white;
+    }
+}
+
+/* End header */
+
+.sliderOne{
+    background-image: url("../Assets/Images/background-slider.jpg");
+    width: 90%;
+}
+
+
+>>>>>>> ac5219600f7997ab227e9c132f14ef1a2f6ef0a5
