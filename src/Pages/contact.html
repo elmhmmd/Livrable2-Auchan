@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TWIZZLE</title>
+    <link rel="stylesheet" href="../CSS/output.css">
+    <link rel="stylesheet" href="../CSS/contact.css">
     <link rel="stylesheet" href="../CSS/Global.css">
-    <link rel="stylesheet" href="../CSS/promotion.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="../JS/contact.js" defer></script>
-
+    <script src="../JS/script.js" defer></script>
+    
 </head>
 <body class="bg-[#D7D8E3]">
 
@@ -38,48 +40,51 @@
         </div>
 
         <div class="container    flex flex-wrap justify-between items-center text-white p-4"> 
-                  <!-- LOGO -->
+                    <!-- Logo -->
         <div class="max-w-[120px] mb-4 sm:mb-0">
             <img src="./img/Black_White_Minimal_Simple_Modern_Creative_Studio_Ego_Logo-removebg-preview.png" alt="Logo">
         </div>
 
         <!-- Navigation -->
         <nav class="w-full sm:w-auto links ">
-          <ul class="flex justify-center sm:justify-start gap-6 sm:gap-8 text-sm w-full">
-              <li class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500">Home</li>
-              <li class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500">Categories</li>
-              <li class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500">Promotions</li>
-              <li class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500">Contact us</li>
-          </ul>
-      </nav>
-      <!-- Right Section (Notification, Cart, Wallet, Profile) -->
-      <div class="flex gap-4 items-center  sm:mt-0">
-        <div class=" header-tools gap-4 "> 
-            <i class="ri-notification-fill text-xl cursor-pointer"></i>
-            <i class="ri-shopping-cart-line text-xl cursor-pointer"></i>
-            <p class="wallet text-sm">$0.00</p>
-        </div>
+            <ul class="flex justify-center sm:justify-start gap-6 sm:gap-8 text-sm w-full">
+                <li class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500">Home</li>
+                <li class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500">Categories</li>
+                <li class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500">Promotions</li>
+                <li class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500">Contact us</li>
+            </ul>
+        </nav>
 
-        <div class="burger-icon h-5 w-7 flex flex-col justify-between cursor-pointer ">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    
-        <div class=" profile-img w-[2.5rem] h-[2.5rem] rounded-full overflow-hidden">
-            <img class="h-full w-full object-cover" src="./img/Profile_picture.jpg" alt="Profile">
-        </div>
-    </div>
-    
+        <!-- Right Section (Notification, Cart, Wallet, Profile) -->
+        <div class="flex gap-4 items-center  sm:mt-0">
+            <div class=" header-tools gap-4 "> 
+                <i class="ri-notification-fill text-xl cursor-pointer"></i>
+                <i class="ri-shopping-cart-line text-xl cursor-pointer"></i>
+                <p class="wallet text-sm">$0.00</p>
+            </div>
 
-    </div>
+            <div class="burger-icon h-5 w-7 flex flex-col justify-between cursor-pointer ">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        
+            <div class=" profile-img w-[2.5rem] h-[2.5rem] rounded-full overflow-hidden">
+                <img class="h-full w-full object-cover" src="./img/Profile_picture.jpg" alt="Profile">
+            </div>
+        </div>
+        
+
+        </div>
+    </header>
+
     <!-- Contact Us Section -->
-  <section class="bg-gray-100 py-10 lg:py-16 text-gray-800 px-4 sm:px-6 lg:px-32">
-    <div class="text-center">
-      <h2 class="text-3xl sm:text-5xl font-bold text-gray-800">CONTACT US</h2>
-      <p class="text-gray-500 mt-2 mb-8 sm:mb-12">Our team of customer care is ready to hear from you.</p>
+  <section class="contact-bg text-center">
+    <div class="text-center flex flex-col justify-center h-[300px] items-center">
+      <h2 class="text-7xl sm:text-7xl font-bold text-gray-800 pb-2">CONTACT US</h2>
+      <p class="text-black-500 mt-3 font-medium	">Our team of customer care is ready to hear from you.</p>
     </div>
-</header>
+    </section>
 
 </body>
 </html>
