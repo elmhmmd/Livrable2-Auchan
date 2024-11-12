@@ -9,6 +9,7 @@
     <title>Document</title>
     <script src="../JS/script.js" defer></script>
     <script src="../JS/promotion.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -20,7 +21,7 @@
         <div class="nav-links left-[-100%] p-8 p gap-12 text-white flex flex-col absolute top-0 h-screen w-full bg-black/65 backdrop-blur-sm   transition-all duration-1000 ease-in-out ">
             <div class="  flex items-center gap-4   "> 
                 <div class=" profile-img w-[2.5rem] h-[2.5rem] rounded-full overflow-hidden">
-                    <img class="h-full w-full object-cover" src="./img/Profile_picture.jpg" alt="Profile">
+                    <img class="h-full w-full object-cover" src="../Assets/Images/Profile_picture.jpg" alt="Profile">
                 </div>
                 <i class="ri-notification-fill text-xl cursor-pointer"></i>
                 <i class="ri-shopping-cart-line text-xl cursor-pointer"></i>
@@ -41,7 +42,7 @@
         <div class="container    flex flex-wrap justify-between items-center text-white p-4"> 
                     <!-- Logo -->
         <div class="max-w-[120px] mb-4 sm:mb-0">
-            <img src="./img/Black_White_Minimal_Simple_Modern_Creative_Studio_Ego_Logo-removebg-preview.png" alt="Logo">
+            <img src="../Assets/Images/Black_White_Minimal_Simple_Modern_Creative_Studio_Ego_Logo-removebg-preview.png" alt="Logo">
         </div>
 
         <!-- Navigation -->
@@ -69,7 +70,7 @@
             </div>
         
             <div class=" profile-img w-[2.5rem] h-[2.5rem] rounded-full overflow-hidden">
-                <img class="h-full w-full object-cover" src="./img/Profile_picture.jpg" alt="Profile">
+                <img class="h-full w-full object-cover" src="../Assets/Images/Profile_picture.jpg" alt="Profile">
             </div>
         </div>
         
@@ -77,8 +78,19 @@
         </div>
     </header>
 
-    <section class=" promo-section  w-screen h-80 bg-cover">
-        <div class="content flex flex-col "></div>
+    <section class=" promo-section flex   w-screen h-96 bg-cover">
+        <div class="content flex flex-col justify-center h-5/6 gap-4 w-1/4 text-white ">
+            <h1 class="text-3xl font-bold">Black Friday</h1>
+            <h2 class="text-2xl font-bold ">40% Off Electronics!</h2>
+            <p>Huge savings on top electronics—smartphones, laptops, TVs, and more! Shop now and get 50% off on your favorite tech products. Limited time only—don't miss out!</p>
+            <button class="rounded-2xl px-4 font-semibold py-1 w-fit text-black ">Shop Now</button>
+        </div>
+        <div class=" self-end ">
+            <img src="../Assets/Images/electronic.png" alt="">
+        </div>
+        <div class=" self-center w-80">
+            <img src="../Assets/Images/solde-40-off.png" alt="">
+        </div>
 
     </section>
 
