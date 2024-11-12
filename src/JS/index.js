@@ -6,3 +6,4 @@ document.querySelector(".burger-icon").addEventListener("click" , function () {
 document.querySelector(".close-icon").addEventListener("click", function () {
     navLinks.style.left= "-100%";
 })
+
