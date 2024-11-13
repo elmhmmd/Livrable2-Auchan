@@ -70,7 +70,7 @@
             </div>
         
             <div class=" profile-img w-[2.5rem] h-[2.5rem] rounded-full overflow-hidden">
-                <img class="h-full w-full object-cover" src="./img/Profile_picture.jpg" alt="Profile">
+                <img class="h-full w-full object-cover" src="../Assets/Images/Profile_picture.jpg" alt="Profile">
             </div>
         </div>
         
@@ -81,10 +81,126 @@
     <!-- Contact-Us Section -->
   <section class="contact-bg text-center">
     <div class="text-center flex flex-col justify-center h-[300px] items-center">
-      <h2 class="text-7xl sm:text-7xl font-bold text-gray-800 pb-2">CONTACT US</h2>
-      <p class="text-black-500 mt-3 font-medium text-2xl">Our team of customer care is ready to hear from you.</p>
+      <h2 class="text-4xl sm:text-7xl font-bold text-gray-800 pb-2">CONTACT US</h2>
+      <p class="text-black-500 mt-3 font-medium text-xl sm:text-2xl">Our team of customer care is ready to hear from you.</p>
     </div>
-    </section>
+
+
+    <div class="lg:flex lg:space-x-8">
+        <!-- Contact Form -->
+        <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg w-full lg:w-1/2">
+          <h3 class="text-2xl font-semibold mb-4 text-gray-800">Reach out to us!</h3>
+          <p class="text-gray-600 mb-6">Got a question about Lander? Interested in partnering with us? Contact us:</p>
+
+          <form id="contactForm" class="space-y-4">
+            <input type="text" placeholder="Full name" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-gray-400" id="name">
+            <input type="email" placeholder="Your Email address" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-gray-400" id="email">
+            <input type="tel" placeholder="Phone number" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-gray-400" id="phone">
+            <textarea placeholder="Message..." class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-gray-400" rows="5" id="message"></textarea>
+
+            <div class="flex space-x-4">
+                <button type="button" class="px-6 py-2 bg-gray-600 text-white rounded" onclick="clearForm()">Fill</button>
+                <button type="submit" class="px-6 py-2 bg-black text-white rounded">Submit</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Customer Care Information -->
+      <div class="bg-gray-200 p-6 sm:p-8 rounded-lg shadow-lg w-full lg:w-1/2 mt-8 lg:mt-0">
+        <h3 class="text-2xl font-semibold mb-4 text-gray-800">Customer care</h3>
+        <p class="text-gray-600 mb-6">An urgent request? We are here to listen to you.</p>
+
+        <div class="space-y-6">
+          <!-- Contact 1 -->
+          <div class="flex items-center space-x-4">
+            <img src="https://via.placeholder.com/50" alt="Claudio Pierantonio" class="w-12 h-12 rounded-full">
+            <div>
+              <p class="font-semibold text-gray-800">Claudio Pierantonio</p>
+              <p class="text-gray-600">Customer care</p>
+              <p class="text-blue-600">+1 886 546 6980</p>
+            </div>
+          </div>
+
+          <!-- Contact 2 -->
+          <div class="flex items-center space-x-4">
+            <img src="https://via.placeholder.com/50" alt="Noelia Rosemberg" class="w-12 h-12 rounded-full">
+            <div>
+              <p class="font-semibold text-gray-800">Noelia Rosemberg</p>
+              <p class="text-gray-600">Customer care Lead</p>
+              <p class="text-blue-600">+1 766 864 8012</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="mt-8 space-y-2">
+          <a href="#" class="block text-gray-600 hover:text-gray-800">Track your order</a>
+          <a href="#" class="block text-gray-600 hover:text-gray-800">View all your orders</a>
+          <a href="#" class="block text-gray-600 hover:text-gray-800">Manage your addresses</a>
+          <a href="#" class="block text-gray-600 hover:text-gray-800">Login</a>
+          <a href="#" class="block text-gray-600 hover:text-gray-800">Create an account</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer  -->
+    <footer class="bg-[#22262D] ">
+        <div class="container flex justify-around items-center p-8 flex-col md:flex-row">
+            <img class="w-40 pb-12 " src="../Assets/Images/Black_White_Minimal_Simple_Modern_Creative_Studio_Ego_Logo-removebg-preview.png" alt="logo">
+            <div class="flex gap-32 text-white md:flex-row">
+                <div class="mb-4 ">
+                    <h1 class="text-xl font-medium pb-2">Quick Links</h1>
+                    <ul>
+                        <li class="pb-1">Home</li>
+                        <li class="pb-1">Promotions</li>
+                        <li class="pb-1">Categorys</li>
+                        <li class="pb-1">Contact Us</li>
+                    </ul>
+                </div>
+                <div class="mb-4">
+                    <h1 class="text-xl font-medium pb-2">Social Media</h1>
+                    <ul>
+                        <li class="pb-1">Facebook</li>
+                        <li class="pb-1">Instagram</li>
+                        <li class="pb-1">Twitter</li>
+                    </ul>
+                </div>
+            </div>
+      
+        </div>
+        <p class="text-white flex justify-end text-xs p-4">2024 Codeshogun. All rights reserved </p>
+    </footer>
+
 
 </body>
 </html>
