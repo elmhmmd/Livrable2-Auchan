@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-gray-900 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-white text-2xl font-bold">THIZZLE</div>
+            <div class="flex items-center space-x-6">
+                <a href="#" class="text-white">Home</a>
+                <a href="#" class="text-gray-400">Categories</a>
+                <a href="#" class="text-gray-400">Promotions</a>
+                <a href="#" class="text-gray-400">Contact us</a>
+                <div class="flex items-center text-white">
+                    <span>$0.00</span>
+                    <div class="ml-4 w-8 h-8 bg-gray-700 rounded-full"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto p-8">
+        <div class="bg-white rounded-lg p-6 max-w-4xl mx-auto">
+            <a href="#" class="flex items-center text-gray-600 mb-6">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+                Continue Shopping
+            </a>
+
+            <h2 class="text-xl mb-4">Shopping cart</h2>
+            <p class="text-gray-500 mb-6">You have 2 items in your cart</p>
+
+            <!-- Cart Items -->
+            <div class="space-y-4">
+                <div class="flex items-center justify-between border-b pb-4">
+                    <div class="flex items-center">
+                        <img src="polo-shirt.jpg" alt="White Polo Shirt" class="w-16 h-16 object-cover mr-4">
+                        <div>
+                            <h3 class="font-medium">White Polo Shirt</h3>
+                            <p class="text-gray-500">men's white polo shirt</p>
+                            <p class="text-gray-700">30$</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <select class="border rounded px-2 py-1">
+                            <option>1</option>
+                        </select>
+                        <button class="ml-4 text-gray-500">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between border-b pb-4">
+                    <div class="flex items-center">
+                        <img src="headphones.jpg" alt="Headphones" class="w-16 h-16 object-cover mr-4">
+                        <div>
+                            <h3 class="font-medium">Headphones</h3>
+                            <p class="text-gray-500">Black wireless headphones</p>
+                            <p class="text-gray-700">30$</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <select class="border rounded px-2 py-1">
+                            <option>1</option>
+                        </select>
+                        <button class="ml-4 text-gray-500">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Total -->
+            <div class="mt-6">
+                <p class="text-xl font-medium">Total: 60$</p>
+            </div>
+
+            <!-- Payment Buttons -->
+            <div class="mt-6 space-y-4">
+                <button class="w-full bg-[#5469d4] text-white py-3 rounded-md">
+                    Buy with Shop
+                </button>
+                <button class="w-full bg-[#ffc439] text-black py-3 rounded-md">
+                    Buy with PayPal
+                </button>
+                <button class="w-full bg-black text-white py-3 rounded-md flex items-center justify-center">
+                    <img src="google-pay.png" alt="Google Pay" class="h-5">
+                </button>
+                <button class="w-full bg-[#ffd814] text-black py-3 rounded-md">
+                    Amazon Pay
+                </button>
+                <button class="w-full bg-black text-white py-3 rounded-md flex items-center justify-center">
+                    <img src="apple-pay.png" alt="Apple Pay" class="h-5">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-8">
+            <div class="grid grid-cols-3 gap-8">
+                <div>
+                    <h2 class="text-2xl font-bold mb-6">THIZZLE</h2>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Categories</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Promotions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Footer</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium mb-4">Social Media</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Facebook</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Instagram</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p>&copy; 2024 THIZZLE. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add custom styles for payment buttons -->
+    <style>
+        /* Custom styles for payment buttons if needed */
+        .payment-button {
+            transition: all 0.2s ease-in-out;
+        }
+        
+        .payment-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</body>
+</html>
