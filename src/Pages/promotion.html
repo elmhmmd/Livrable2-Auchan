@@ -6,7 +6,6 @@
     <title>TWIZZLE</title>
     <link rel="stylesheet" href="../CSS/output.css">
     <link rel="stylesheet" href="../CSS/promotion.css">
-    <title>Document</title>
     <script src="../JS/script.js" defer></script>
     <script src="../JS/promotion.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -63,7 +62,7 @@
                 <p class="wallet text-sm">$0.00</p>
             </div>
 
-            <div class="burger-icon h-5 w-7 flex flex-col justify-between cursor-pointer ">
+            <div class="burger-icon h-5 w-7  flex-col justify-between cursor-pointer ">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -78,20 +77,61 @@
         </div>
     </header>
 
-    <section class=" promo-section flex   w-screen h-96 bg-cover">
-        <div class="content flex flex-col justify-center h-5/6 gap-4 w-1/4 text-white ">
-            <h1 class="text-3xl font-bold">Black Friday</h1>
-            <h2 class="text-2xl font-bold ">40% Off Electronics!</h2>
-            <p>Huge savings on top electronics—smartphones, laptops, TVs, and more! Shop now and get 50% off on your favorite tech products. Limited time only—don't miss out!</p>
-            <button class="rounded-2xl px-4 font-semibold py-1 w-fit text-black ">Shop Now</button>
+    <section class=" promo-section p-6 relative flex justify-center  w-screen bg-center  bg-cover">
+        <div class="bg-black/75 absolute inset-0"></div>
+        <div class="content  z-10 flex flex-col justify-center h-5/6 w-2/4 gap-4 lg:w-2/4 text-white ">
+            <h1 class="text-xl lg:text-4xl font-bold">Black Friday</h1>
+            <h2 class="text-lg lg:text-3xl font-bold ">50% Off Electronics!</h2>
+            <p class="text-sm lg:text-lg">Huge savings on top electronics—smartphones, laptops, TVs, and more! Shop now and get 50% off on your favorite tech products. Limited time only—don't miss out!</p>
+            <button class="rounded-2xl text-sm px-2 py-1 md:px-4  sm:text-lg  font-semibold  w-fit text-black ">Shop Now</button>
         </div>
-        <div class=" self-end ">
-            <img src="../Assets/Images/electronic.png" alt="">
+        <div class=" promo-imgage flex flex-col-reverse lg:flex-row">
+            <div class="  self-end z-10 ">
+                <img src="../Assets/Images/electronic.png" alt="">
+            </div>
+            <div class=" solde self-end mr-7  lg:self-center lg:mt-4 w-1/3 lg:w-60 z-10">
+                <img src="../Assets/Images/50off.png" alt="kgvhgvgv">
+            </div>
         </div>
-        <div class=" self-center w-80">
-            <img src="../Assets/Images/solde-40-off.png" alt="">
-        </div>
+    </section>
 
+    <section class="" >
+        <h2 class="flex items-center text-xl font-semibold text-black my-6">
+            <span class="flex-grow border-t-2 border-black "></span>
+            <span class="px-3 ">Exclusive Deals</span>
+            <span class="flex-grow border-t-2 border-black "></span>
+          </h2>
+        <div class="grid grid-cols-3  p-8 grid-rows-2 gap-4 sm:grid-cols-4 ">
+            <div class="promo-item flex items-center flex-col rounded-tl-[16px] rounded-bl-[16px] bg-cover bg-center B h-[300px] md:h-[400px] col-span-2 row-span-2 ">
+                <img class="w-1/4 my-2" src="../Assets/Images/60-sale.png" alt=" sale off 60%">
+                <img class="w-2/6" src="../Assets/Images/parfume.png" alt="parfume image">
+                <!-- <div class="w-[90%] flex text-white items-center justify-between">
+                    <h3 class="font-semibold text-xl">Parfum Shalimar</h3>
+                    <button class="flex items-center gap-x-4 px-2 py-4 ">
+                    </button>
+
+                   
+                </div> -->
+                <div class="flex items-center justify-between w-[90%]">
+                    <div> 
+                        <h3 class="font-semibold text-xl">${ele.price}$</h3>
+        
+                    </div>
+                    
+                    <button
+                      class="flex items-center gap-x-4 px-2 py-1 text-sm rounded-md text-black font-bold bg-white"
+                    >
+                      <span class="-mt-1"> Add To Cart </span>
+                      <i class="fa-solid fa-cart-shopping text-sm m-0"></i>
+                    </button>
+                  </div>
+
+            </div>
+            <div class=" item rounded-tr-[16px] rounded-br-[16px] bg-cover sm:rounded-tr-none sm:rounded-br-none bg-center p-4"></div>
+            <div class=" item rounded-tr-[16px] rounded-br-[16px] bg-cover bg-center p-4"></div>
+            <div class="item hidden sm:block bg-cover bg-center  p-4"></div>
+            <div class="item rounded-tr-[16px] rounded-br-[16px] hidden sm:block bg-cover bg-center p-4"></div>
+          </div>
     </section>
 
 </body>
