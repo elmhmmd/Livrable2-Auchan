@@ -7,3 +7,60 @@ document.querySelector(".close-icon").addEventListener("click", function () {
     navLinks.style.left= "-100%";
 })
 
+
+
+
+
+
+
+// Select elements
+const prevButton = document.getElementById("prev");
+const nextButton = document.getElementById("next");
+const sliderContainer = document.querySelector(".slider-container");
+const slides = document.querySelectorAll(".sliderOne");
+
+let currentSlide = 0; 
+
+// Update slider position 
+function updateSliderPosition() {
+    const slideWidth = slides[0].offsetWidth;
+    sliderContainer.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+    updateSlideVisibility();
+}
+
+
+// Show the previous slide
+prevButton.addEventListener("click", () => {
+    if (currentSlide > 0) {
+        currentSlide--;
+    } else {
+        currentSlide = slides.length - 1; 
+    }
+    updateSliderPosition();
+});
+
+// Show the next slide
+nextButton.addEventListener("click", () => {
+    if (currentSlide < slides.length - 1) {
+        currentSlide++;
+    } else {
+        currentSlide = 0; 
+    }
+    updateSliderPosition();
+});
+
+
+setInterval(() => {
+    nextButton.click();
+}, 4000); 
+
+function updateSlideVisibility() {
+    
+    slides.forEach((slide, index) => {
+        if (index === currentSlide) {
+            slide.style.visibility = "visible"; 
+        } else {
+            slide.style.visibility = "hidden"; 
+        }
+    });
+}
