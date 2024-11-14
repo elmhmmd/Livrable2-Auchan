@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./CSS/output.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
 </head>
 <body class="bg-[#D7D8E3]">
 
@@ -77,11 +79,11 @@
 
     <section class="mainSlider overflow-x-hidden relative flex justify-center my-4">
         <!-- Slide Container -->
-        <div class="slider-container flex  px-20 mt-4   transition-transform duration-2000 ease-in-out">
+        <div class="slider-container flex  px-20 mt-4   transition-transform duration-3000 ease-in-out">
             
             
             <!-- Slide 1 -->
-            <div class="sliderOne min-w-full bg-cover flex flex-col-reverse justify-around items-center text-white rounded-3xl sm:flex-row">
+            <div class="sliderOne min-w-full bg-cover flex flex-col-reverse justify-around items-center text-white rounded-3xl sm:flex-row ">
                 <!-- Content -->
                 <div class="info w-5/6 lg:w-3/5">
                     <h1 class="text-xl font-bold pb-1 lg:text-4xl lg:pb-2">Lighting Deals</h1>
@@ -131,9 +133,32 @@
         <i id="next" class=" fa-solid fa-chevron-right absolute right-8 top-1/2 transform -translate-y-1/2 text-black text-4xl  "></i>
        
     </section>
+
+
+ 
+
+    <section class="grid-section ml-24 h-96 mt-16 mb-16 grid grid-cols-2 sm:grid-cols-12 gap-4 sm:grid-rows-2">
+         
+            <!-- First block - covers 3 columns and 2 rows on small screens -->
+            <div class="sm:col-span-3 sm:row-span-2  bg-black rounded-tl-3xl 
+            rounded-bl-3xl"></div>
+            
+            <!-- Second block - covers 5 columns on small screens -->
+            <div class="sm:col-span-5  bg-black "></div>
+            
+            <!-- Third block - covers 3 columns on small screens -->
+            <div class="sm:col-span-3  bg-black rounded-tr-3xl"></div>
     
-   
+            <!-- Fourth block - covers 3 columns on small screens -->
+            <div class="sm:col-span-3  bg-black"></div>
     
+            <!-- Fifth block - covers 5 columns on small screens -->
+            <div class="sm:col-span-5  bg-black 
+            rounded-br-3xl"></div>
+        
+    </section>
+    
+
 
     <footer class="bg-[#22262D] ">
         <div class="container flex justify-around items-center p-8 flex-col md:flex-row">

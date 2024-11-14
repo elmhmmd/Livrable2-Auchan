@@ -620,6 +620,10 @@ video {
   top: 50%;
 }
 
+.m-4 {
+  margin: 1rem;
+}
+
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -637,16 +641,20 @@ video {
   margin-top: 0.25rem;
 }
 
-.mt-3 {
-  margin-top: 0.75rem;
-}
-
 .mt-4 {
   margin-top: 1rem;
 }
 
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
+}
+
+.grid {
+  display: grid;
 }
 
 .hidden {
@@ -667,6 +675,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.min-h-\[250px\] {
+  min-height: 250px;
 }
 
 .w-40 {
@@ -713,6 +725,10 @@ video {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -803,6 +819,11 @@ video {
   background-color: rgb(215 216 227 / var(--tw-bg-opacity));
 }
 
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-black\/65 {
   background-color: rgb(0 0 0 / 0.65);
 }
@@ -851,16 +872,6 @@ video {
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-}
-
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
 }
 
 .pb-1 {
@@ -921,6 +932,11 @@ video {
   font-weight: 500;
 }
 
+.text-\[\#D7D8E3\] {
+  --tw-text-opacity: 1;
+  color: rgb(215 216 227 / var(--tw-text-opacity));
+}
+
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -929,15 +945,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[\#\] {
-  color: #;
-}
-
-.text-\[\#D7D8E3\] {
-  --tw-text-opacity: 1;
-  color: rgb(215 216 227 / var(--tw-text-opacity));
 }
 
 .backdrop-blur-sm {
@@ -1039,6 +1046,18 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
+  .sm\:col-span-5 {
+    grid-column: span 5 / span 5;
+  }
+
+  .sm\:row-span-2 {
+    grid-row: span 2 / span 2;
+  }
+
   .sm\:mb-0 {
     margin-bottom: 0px;
   }
@@ -1053,6 +1072,14 @@ video {
 
   .sm\:w-auto {
     width: auto;
+  }
+
+  .sm\:grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .sm\:grid-rows-2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
   .sm\:flex-row {
