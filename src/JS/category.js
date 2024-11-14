@@ -24,7 +24,7 @@ const RenderCards = async () => {
   data.map((ele) => {
     categoriesCont.innerHTML += `
       <div
-        class="card w-full flex flex-col justify-between rounded-3xl px-3 py-4 text-white h-[330px] lg:h-[400px] overflow-hidden"
+        class="card w-full  flex-col justify-between rounded-3xl px-3 py-4 text-white h-[330px] lg:h-[400px] overflow-hidden"
       >
         <img
           src="${ele.image || "../Assets/Images/t-shirt-placeholder.png"}"
@@ -50,6 +50,94 @@ const RenderCards = async () => {
       </div>
     `;
   });
-};
+  displayCards();
 
+};
 RenderCards();
+
+
+
+//  ==> start of pagination section
+let pagesindex = document.querySelector(".pagination").querySelectorAll("li")
+
+let currentPage = 1;
+let numberPages = 4;
+let cardsPerPage = 8;
+
+function activePage() {
+    pagesindex.forEach((l, index) => {
+        if (l.value == currentPage) {
+            l.classList.remove("selected")
+        }
+    });
+    event.target.classList.add("selected")
+    currentPage= event.target.value;
+    console.log(currentPage)
+    displayCards();
+
+}
+
+function prevPage() {
+
+    if (currentPage > 1) {
+        pagesindex.forEach((l) => {
+            if (l.value == currentPage) {
+                l.classList.remove("selected")
+            }
+        });
+
+        currentPage--;
+        pagesindex.forEach((l) => {
+            if (l.value == currentPage) {
+                l.classList.add("selected")
+            }
+        });
+        displayCards();
+    }   
+}
+function nextPage() {
+
+    if (currentPage < numberPages) {
+        pagesindex.forEach((l) => {
+            if (l.value == currentPage) {
+                l.classList.remove("selected")
+            }
+        });
+
+        currentPage++;
+        pagesindex.forEach((l) => {
+            if (l.value == currentPage) {
+                l.classList.add("selected")
+            }
+        });
+
+        displayCards();
+    }   
+}
+
+function displayCards() {
+  let cards = document.querySelectorAll(".card")
+    let start = (currentPage-1)*cardsPerPage ;
+    let end = currentPage*cardsPerPage - 1;
+
+    console.log(cards.length)
+    cards.forEach((item , index)=> {
+        console.log(index+"mama")
+        if ((index >= start) && (index <= end)) {
+          item.classList.remove("hidden");
+          item.classList.add("flex");
+          console.log(item)
+            // item.style.display = 'flex'
+        } else {
+          item.classList.remove("flex");
+          item.classList.add("hidden");
+        }
+    });
+    
+}
+
+
+
+//  ==> end of pagination section
+
+

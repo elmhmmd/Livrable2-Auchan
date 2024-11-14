@@ -9,12 +9,13 @@
     background-color: #EECD70;
 
 }
-
+  
 .promo-item{
     background-image: url('../Assets/Images/blue-background.png');
 
 
 }
+.card,
 .item{
     background-image: url('../Assets/Images/item-bg.jfif');
 }

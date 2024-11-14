@@ -5,3 +5,30 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+.pagination {
+  margin-top: 32px;
+    justify-self: center; 
+  }
+
+
+  .pagination ul li {
+    /* background-color: white; */
+    color: rgb(4, 4, 24);
+    margin: 6px ;
+
+  }
+
+.pagination ul .selected {
+    background-color: rgba(9, 9, 15, 0.735);
+    color: white;
+    /* bg-gray-900 text-white */
+    
+  }
+
+  /* .pagination .chevron {
+    font-size: larger;
+    font-weight: bolder;
+    border: none;
+    background-color:rgba(255, 255, 255, 0);
+  }   */
+  
