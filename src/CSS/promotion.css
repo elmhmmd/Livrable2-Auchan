@@ -31,7 +31,6 @@
 @media (max-width: 660px) {
     .promo-imgage{
         display: none;
-
     }
     .content {
         width: 100%;
@@ -41,7 +40,6 @@
     .content button{
         align-self: center;
         margin-top: 24px;
-
     }
     .promo-section{
         height: fit-content;
