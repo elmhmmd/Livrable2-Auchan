@@ -15,9 +15,17 @@
 
 
 }
-.card,
+
 .item{
     background-image: url('../Assets/Images/item-bg.jfif');
+}
+
+.card {
+    background-image: url("../Assets/Images/card-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: space-between;
 }
 
 @media (max-width: 660px) {
@@ -41,4 +49,22 @@
    
     
 }
-
+/* start pagination  */
+.pagination {
+    margin-top: 32px;
+      justify-self: center; 
+    }
+  
+  
+    .pagination ul li {
+      /* background-color: white; */
+      color: rgb(4, 4, 24);
+      margin: 6px ;
+  
+    }
+  
+  .pagination ul .selected {
+      background-color: rgba(9, 9, 15, 0.735);
+      color: white;
+    }
+  /* end pagination  */

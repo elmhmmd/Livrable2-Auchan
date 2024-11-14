@@ -24,7 +24,7 @@ const RenderCards = async () => {
   data.map((ele) => {
     categoriesCont.innerHTML += `
       <div
-        class="card w-full  flex-col justify-between rounded-3xl px-3 py-4 text-white h-[330px] lg:h-[400px] overflow-hidden"
+        class="card background_img w-full  flex-col justify-between rounded-3xl px-3 py-4 text-white h-[330px] lg:h-[400px] overflow-hidden"
       >
         <img
           src="${ele.image || "../Assets/Images/t-shirt-placeholder.png"}"

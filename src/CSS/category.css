@@ -1,10 +1,11 @@
 
-.card {
+.background_img {
     background-image: url("../Assets/Images/card-background.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
+/* start pagination  */
 .pagination {
   margin-top: 32px;
     justify-self: center; 
@@ -21,14 +22,8 @@
 .pagination ul .selected {
     background-color: rgba(9, 9, 15, 0.735);
     color: white;
-    /* bg-gray-900 text-white */
-    
   }
+/* end pagination  */
 
-  /* .pagination .chevron {
-    font-size: larger;
-    font-weight: bolder;
-    border: none;
-    background-color:rgba(255, 255, 255, 0);
-  }   */
+
   
