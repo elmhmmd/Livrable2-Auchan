@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TWIZZLE</title>
     <link rel="stylesheet" href="./CSS/index.css">
-    <link rel="stylesheet" href="./CSS/Global.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./CSS/output.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
 </head>
 <body class="bg-[#D7D8E3]">
 
 
+    <!-- header -->
     <header class="bg-[#22262D] pt-2 px-4 ">
 
         <div class="nav-links left-[-100%] p-8 p gap-12 text-white flex flex-col absolute top-0 h-screen w-full bg-black/65 backdrop-blur-sm   transition-all duration-1000 ease-in-out ">
@@ -67,7 +69,7 @@
             </div>
         
             <div class=" profile-img w-[2.5rem] h-[2.5rem] rounded-full overflow-hidden">
-                <img class="h-full w-full object-cover" src="./img/Profile_picture.jpg" alt="Profile">
+                <img class="h-full w-full object-cover" src="./Assets/Images/Profile_picture.jpg" alt="Profile">
             </div>
         </div>
         
@@ -76,84 +78,98 @@
     </header>
   
 
-    <section class="mainSlider overflow-scroll flex justify-center my-4 ">
-
-        <div class="sliderOne min-w-full p-8 bg-cover  flex flex-col-reverse justify-around items-center  text-white  rounded-2xl sm:flex-row ">
-          
-    
-            <!-- Content to overlay on image -->
-                
-                <div class="info w-5/6 lg:w-3/5    ">
+    <!-- Slider Section -->
+    <section class="mainSlider overflow-x-hidden relative flex justify-center  mb-12">
+     
+        <div class="slider-container flex  sm:px-20   sm:mt-4   transition-transform duration-3000 ease-in-out">
+            
+            
+            <!-- Slide 1 -->
+            <div class="sliderOne  min-w-full p-8 bg-cover flex  justify-around items-center  text-white sm:rounded-3xl sm:flex-row">
+                <div class="info w-5/6 lg:w-3/5">
                     <h1 class="text-xl font-bold pb-1 lg:text-4xl lg:pb-2">Lighting Deals</h1>
-                    <h3 class="text-sm font-medium lg:text-2xl lg:pb-2">Smart Watch</h3>
-                    <p class=" text-xs w-84 lg:text-lg lg:w-11/12">Stay connected and on track with our sleek 
-                        smartwatch. Get notifications, monitor your 
-                        fitness, and enjoy all-day comfort. Built for 
-                        both style and performance, it’s your ultimate
-                         tech companion wherever life takes you.
-                    </p>
-                    <p class=" mt-1 pb-1 lg:text-lg lg:pb-4">20$</p>
-                    <a href="#" class="bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400 lg:px-4 lg:py-2  lg:text-sm">Add To Cart</a>
+                    <h3 class="text-sm font-medium lg:text-2xl lg:pb-2">Black hoodie</h3>
+                    <p class="text-xs w-84 text-[#D7D8E3] lg:text-lg lg:w-11/12">Stay connected and on track with our sleek smartwatch. Get notifications, monitor your fitness, and enjoy all-day comfort. Built for both style and performance, it’s your ultimate tech companion wherever life takes you.</p>
+                    <p class="mt-1 pb-1 text-[#D7D8E3] lg:text-lg lg:pb-4">20$</p>
+                    <a href="#" class="bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400 lg:px-4 lg:py-2 lg:text-sm">Add To Cart</a>
                 </div>
                 <div>
-                    <img class="w-fit sm:w-48 " src="./Assets/Images/png-transparent-apple-watch-smartwatch-wearable-technology-apple-products-electronics-gadget-company-removebg-preview.png" alt="appleWatch">           
+                    <img class=" w-48 sm:w-48" src="./Assets/Images/png-transparent-apple-watch-smartwatch-wearable-technology-apple-products-electronics-gadget-company-removebg-preview.png" alt="appleWatch">
                 </div>
-
-         </div>
-          <div class="sliderOne min-w-full p-8 bg-cover  flex flex-col-reverse justify-around items-center  text-white  rounded-2xl sm:flex-row ">
-          
+            </div>
     
-            <!-- Content to overlay on image -->
-                
+            <!-- Slide 2 -->
+            <div class="sliderOne  min-w-full p-8 bg-cover flex  justify-around items-center  text-white sm:rounded-3xl sm:flex-row">
+                <div class="info w-5/6 lg:w-3/5">
+                    <h1 class="text-xl font-bold pb-1 lg:text-4xl lg:pb-2">Lighting Deals</h1>
+                    <h3 class="text-sm font-medium lg:text-2xl lg:pb-2">Black hoodie</h3>
+                    <p class="text-xs w-84 text-[#D7D8E3] lg:text-lg lg:w-11/12">Stay connected and on track with our sleek smartwatch. Get notifications, monitor your fitness, and enjoy all-day comfort. Built for both style and performance, it’s your ultimate tech companion wherever life takes you.</p>
+                    <p class="mt-1 pb-1 text-[#D7D8E3] lg:text-lg lg:pb-4">20$</p>
+                    <a href="#" class="bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400 lg:px-4 lg:py-2 lg:text-sm">Add To Cart</a>
+                </div>
+                <div>
+                    <img class=" w-48 sm:w-48" src="./Assets/Images/pngegg (3).png" alt="appleWatch">
+                </div>
+            </div>
+    
+            <!-- Slide 3 -->
+            <div class="sliderOne min-w-full p-8 bg-cover flex  justify-around items-center text-white sm:rounded-3xl sm:flex-row">
                 <div class="info w-5/6 lg:w-3/5">
                     <h1 class="text-xl font-bold pb-1 lg:text-4xl lg:pb-2">Lighting Deals</h1>
                     <h3 class="text-sm font-medium lg:text-2xl lg:pb-2">Smart Watch</h3>
-                    <p class=" text-xs w-84 lg:text-lg lg:w-11/12">Stay connected and on track with our sleek 
-                        smartwatch. Get notifications, monitor your 
-                        fitness, and enjoy all-day comfort. Built for 
-                        both style and performance, it’s your ultimate
-                         tech companion wherever life takes you.
-                    </p>
-                    <p class=" mt-1 pb-1 lg:text-lg lg:pb-4">20$</p>
-                    <a href="#" class="bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400 lg:px-4 lg:py-2  lg:text-sm">Add To Cart</a>
+                    <p class="text-xs text-[#D7D8E3] w-84 lg:text-lg lg:w-11/12">Stay connected and on track with our sleek smartwatch. Get notifications, monitor your fitness, and enjoy all-day comfort. Built for both style and performance, it’s your ultimate tech companion wherever life takes you.</p>
+                    <p class="mt-1 text-[#D7D8E3] pb-1 lg:text-lg lg:pb-4">20$</p>
+                    <a href="#" class="bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400 lg:px-4 lg:py-2 lg:text-sm">Add To Cart</a>
                 </div>
                 <div>
-                    <img class="w-fit sm:w-48 " src="./Assets/Images/png-transparent-apple-watch-smartwatch-wearable-technology-apple-products-electronics-gadget-company-removebg-preview.png" alt="appleWatch">           
+                    <img class=" w-48 sm:w-48" src="./Assets/Images/pngegg (2).png" alt="appleWatch">
                 </div>
-
-         </div>
-         <div class="sliderOne min-w-full p-8 bg-cover  flex flex-col-reverse justify-around items-center  text-white  rounded-2xl sm:flex-row ">
-          
+            </div>
     
-            <!-- Content to overlay on image -->
-                
-                <div class="info w-5/6 lg:w-3/5">
-                    <h1 class="text-xl font-bold pb-1 lg:text-4xl lg:pb-2">Lighting Deals</h1>
-                    <h3 class="text-sm font-medium lg:text-2xl lg:pb-2">Smart Watch</h3>
-                    <p class=" text-xs w-84 lg:text-lg lg:w-11/12">Stay connected and on track with our sleek 
-                        smartwatch. Get notifications, monitor your 
-                        fitness, and enjoy all-day comfort. Built for 
-                        both style and performance, it’s your ultimate
-                         tech companion wherever life takes you.
-                    </p>
-                    <p class=" mt-1 pb-1 lg:text-lg lg:pb-4">20$</p>
-                    <a href="#" class="bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400 lg:px-4 lg:py-2  lg:text-sm">Add To Cart</a>
-                </div>
-                <div>
-                    <img class="w-fit sm:w-48 " src="./Assets/Images/png-transparent-apple-watch-smartwatch-wearable-technology-apple-products-electronics-gadget-company-removebg-preview.png" alt="appleWatch">           
-                </div>
+        </div>
 
-         </div>
-         
-         
-         
-         
-       
-        
-    
+        <div class="hidden sm:block ">
+             <i id="prev" class="fa-solid fa-chevron-left absolute left-8 top-1/2 transform -translate-y-1/2 text-black text-4xl "></i>
+             <i id="next" class=" fa-solid fa-chevron-right absolute right-8 top-1/2 transform -translate-y-1/2 text-black text-4xl  "></i>
+        </div>      
     </section>
-   
+
+    <!-- line -->
+    <div class="relative">
+        <hr class="border-t-2 border-black w-11/12 mx-auto">
+        <h3 class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center bg-[#D7D8E3] px-2">Trending Products</h3>
+    </div> 
+ 
+
+    <!-- Trending Product Section -->
+    <section class="grid-section sm:ml-24 h-96 mt-12 mb-16 grid grid-cols-2 sm:grid-cols-12 gap-4 px-4  sm:grid-rows-2">
+         
+          
+            <div class="topProducts bg-cover bg-center sm:col-span-3 sm:row-span-2  bg-black sm:rounded-tl-3xl 
+            sm:rounded-bl-3xl"></div>
+            
+           
+            <div class="topProducts bg-cover bg-center sm:col-span-5  bg-black ">
+                
+            </div>
+            
+         
+            <div class="topProducts bg-cover bg-center sm:col-span-3  bg-black sm:rounded-tr-3xl"></div>
     
+          
+            <div class="topProducts bg-cover bg-center sm:col-span-3  bg-black"></div>
+    
+      
+            <div class="topProducts bg-cover bg-center sm:col-span-5  bg-black 
+            sm:rounded-br-3xl"></div>
+            
+            <div class="topProducts bg-cover bg-center sm:hidden sm:col-span-5  bg-black 
+            sm:rounded-br-3xl"></div>
+            
+
+    </section>
+    
+
 
     <footer class="bg-[#22262D] ">
         <div class="container flex justify-around items-center p-8 flex-col md:flex-row">
@@ -177,7 +193,6 @@
                     </ul>
                 </div>
             </div>
-      
         </div>
         <p class="text-white flex justify-end text-xs p-4">2024 Codeshogun. All rights reserved </p>
     </footer>
