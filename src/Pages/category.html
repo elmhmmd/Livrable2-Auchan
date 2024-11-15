@@ -1,91 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/output.css">
-    <link rel="stylesheet" href="../CSS/category.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/output.css" />
+    <link rel="stylesheet" href="../CSS/category.css" />
     <title>Document</title>
     <script src="../JS/script.js" defer></script>
     <script src="../JS/category.js" defer></script>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body class="bg-[#D7D8E3]">
-    <header class="bg-[#22262D] pt-2 px-4 ">
-
-        <div class="nav-links left-[-100%] p-8 p gap-12 text-white flex flex-col absolute top-0 h-screen w-full bg-black/65 backdrop-blur-sm   transition-all duration-1000 ease-in-out ">
-            <div class="  flex items-center gap-4 pr-12  "> 
-                <div class=" profile-img w-[2.5rem] h-[2.5rem] rounded-full overflow-hidden">
-                    <img class="h-full w-full object-cover" src="./img/Profile_picture.jpg" alt="Profile">
-                </div>
-                <i class="ri-notification-fill text-xl cursor-pointer"></i>
-                <i class="ri-shopping-cart-line text-xl cursor-pointer"></i>
-                <p class="wallet text-sm">$0.00</p>
-                <i  class="  close-icon  fa-regular fa-circle-xmark ml-auto text-3xl cursor-pointer"></i>
-                
-            </div>
-
-            <ul class="flex flex-col font-bold text-lg  w-fit  justify-center sm:justify-start gap-6 sm:gap-8  ">
-                <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500">Home</li>
-                <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500">Categories</li>
-                <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500">Promotions</li>
-                <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500">Contact us</li>
-            </ul>
-
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body class="bg-[#D7D8E3]">
+    <header class="bg-[#22262D] pt-2 px-4">
+      <div
+        class="nav-links left-[-100%] p-8 p gap-12 text-white flex flex-col absolute top-0 h-screen w-full bg-black/65 backdrop-blur-sm transition-all duration-1000 ease-in-out"
+      >
+        <div class="flex items-center gap-4 pr-12">
+          <div
+            class="profile-img w-[2.5rem] h-[2.5rem] rounded-full overflow-hidden"
+          >
+            <img
+              class="h-full w-full object-cover"
+              src="../Assets/Images/Profile_picture.jpg"
+              alt="Profile"
+            />
+          </div>
+          <i class="ri-notification-fill text-xl cursor-pointer"></i>
+          <i class="ri-shopping-cart-line text-xl cursor-pointer"></i>
+          <p class="wallet text-sm">$0.00</p>
+          <i
+            class="close-icon fa-regular fa-circle-xmark ml-auto text-3xl cursor-pointer"
+          ></i>
         </div>
 
-        <div class="container  flex flex-wrap justify-between items-center text-white p-4"> 
-                    <!-- Logo -->
-        <div class="max-w-[120px] mb-4 sm:mb-0">
-            <img src="./img/Black_White_Minimal_Simple_Modern_Creative_Studio_Ego_Logo-removebg-preview.png" alt="Logo">
+        <ul
+          class="flex flex-col font-bold text-lg w-fit justify-center sm:justify-start gap-6 sm:gap-8"
+        >
+          <li
+            class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
+          >
+            Home
+          </li>
+          <li
+            class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
+          >
+            Categories
+          </li>
+          <li
+            class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
+          >
+            Promotions
+          </li>
+          <li
+            class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
+          >
+            Contact us
+          </li>
+        </ul>
+      </div>
+
+      <div
+        class="container flex flex-wrap justify-between items-center text-white p-4"
+      >
+        <!-- Logo -->
+        <div class="max-w-[120px] sm:mb-0">
+          <img
+            src="../assets/Images/Black_White_Minimal_Simple_Modern_Creative_Studio_Ego_Logo-removebg-preview.png"
+            alt="Logo"
+          />
         </div>
 
         <!-- Navigation -->
-        <nav class="w-full sm:w-auto links ">
-            <ul class="flex justify-center sm:justify-start gap-6 sm:gap-8 text-sm w-full">
-                <li class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500">Home</li>
-                <li class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500">Categories</li>
-                <li class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500">Promotions</li>
-                <li class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500">Contact us</li>
-            </ul>
+        <nav class="w-full sm:w-auto links">
+          <ul
+            class="flex justify-center sm:justify-start gap-6 sm:gap-8 text-sm w-full"
+          >
+            <li
+              class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
+            >
+              Home
+            </li>
+            <li
+              class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
+            >
+              Categories
+            </li>
+            <li
+              class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
+            >
+              Promotions
+            </li>
+            <li
+              class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
+            >
+              Contact us
+            </li>
+          </ul>
         </nav>
 
         <!-- Right Section (Notification, Cart, Wallet, Profile) -->
-        <div class="flex gap-4 items-center  sm:mt-0">
-            <div class=" header-tools gap-4 "> 
-                <i class="ri-notification-fill text-xl cursor-pointer"></i>
-                <i class="ri-shopping-cart-line text-xl cursor-pointer"></i>
-                <p class="wallet text-sm">$0.00</p>
-            </div>
+        <div class="flex gap-4 items-center sm:mt-0">
+          <div class="header-tools gap-4">
+            <i class="ri-notification-fill text-xl cursor-pointer"></i>
+            <i class="ri-shopping-cart-line text-xl cursor-pointer"></i>
+            <p class="wallet text-sm">$0.00</p>
+          </div>
 
-            <div class="burger-icon h-5 w-7 flex flex-col justify-between cursor-pointer ">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        
-            <div class=" profile-img w-[2.5rem] h-[2.5rem] rounded-full overflow-hidden">
-                <img class="h-full w-full object-cover" src="./img/Profile_picture.jpg" alt="Profile">
-            </div>
-        </div>
-        
+          <div
+            class="burger-icon h-5 w-7 flex flex-col justify-between cursor-pointer"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
 
+          <div
+            class="profile-img w-[2.5rem] h-[2.5rem] rounded-full overflow-hidden"
+          >
+            <img
+              class="h-full w-full object-cover"
+              src="../Assets/Images/Profile_picture.jpg"
+              alt="Profile"
+            />
+          </div>
         </div>
+      </div>
     </header>
     <main class="container">
-        <div class="flex justify-between items-center">
-            <ul class=" categories flex items-center gap-x-4">
-                <li>cat 1</li>
-                <li>cat 2</li>
-                <li>cat 3</li>
-            </ul>
-            <div class="flex items-center gap-x-3">
-                <span>abcd</span>
-                <span>abcd</span>
-                <span>abcd</span>
-            </div>
+      <div class="flex mt-8 lg:mt-20 justify-between items-center">
+        <ul class="category_list hidden md:flex items-center gap-x-4">
+          <li class="hover:bg-white font-bold px-3 py-1 rounded-lg">Clothes</li>
+          <li class="hover:bg-white font-bold px-3 py-1 rounded-lg">Desert</li>
+          <li class="hover:bg-white font-bold px-3 py-1 rounded-lg">food</li>
+        </ul>
+        <div
+          class="rounded-md text-white cursor-pointer md:hidden px-2 w-36 py-2 flex items-center justify-between font-bold bg-black"
+        >
+          Categories
+          <i class="fa-solid fa-chevron-down"></i>
         </div>
+        <div class="flex items-center gap-x-5">
+          <i class="fa-solid fa-filter text-2xl cursor-pointer"></i>
+          <i class="fa-solid fa-list text-2xl cursor-pointer"></i>
+          <i
+            class="fa-solid fa-table-cells text-2xl text-gray-400 cursor-pointer"
+          ></i>
+        </div>
+      </div>
+      <div class="categoriesContainer grid grid-cols-2 mt-8 md:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-x-10 lg:gap-x-20">
+        <div
+          class="card w-full flex flex-col justify-between  rounded-3xl px-3 py-4 text-white h-[400px] overflow-hidden"
+        >
+          <img
+            src="../Assets/Images/t-shirt-placeholder.png"
+            alt=""
+            class="w-52 mx-auto mt-4 rounded-md"
+          />
+          <div>
+            <h1 class="text-xl font-bold text-white mt-3">Polo t-shirt</h1>
+            <div class="stars flex items-center gap-x-1 mt-3">
+              <img src="../Assets/Images/start.png" alt="" />
+              <img src="../Assets/Images/start.png" alt="" />
+              <img src="../Assets/Images/start.png" alt="" />
+              <img src="../Assets/Images/start.png" alt="" />
+              <img src="../Assets/Images/start.png" alt="" />
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-xl">30$</h3>
+            <button
+              class="flex items-center gap-x-4 px-3 py-1 rounded-md text-black font-bold bg-white"
+            >
+              <span class="-mt-1"> Add To Cart </span>
+
+              <i class="fa-solid fa-cart-shopping text-sm m-0"></i>
+            </button>
+          </div>
+        </div>
+      </div>
     </main>
-</body>
+  </body>
 </html>
