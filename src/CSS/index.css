@@ -40,8 +40,14 @@
 .sliderOne{
     background-image: url("../Assets/Images/background-slider.jpg");
     width: 90%;
-    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+   
   
+}
+
+.topProducts{
+    background-image: url("../Assets/Images/gettyimages-1487257611-640x640.jpg");
+    
+
 }
 
 

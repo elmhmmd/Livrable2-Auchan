@@ -21,7 +21,7 @@ const slides = document.querySelectorAll(".sliderOne");
 
 let currentSlide = 0; 
 
-// Update slider position 
+
 function updateSliderPosition() {
     const slideWidth = slides[0].offsetWidth;
     sliderContainer.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
@@ -29,7 +29,6 @@ function updateSliderPosition() {
 }
 
 
-// Show the previous slide
 prevButton.addEventListener("click", () => {
     if (currentSlide > 0) {
         currentSlide--;
@@ -39,7 +38,7 @@ prevButton.addEventListener("click", () => {
     updateSliderPosition();
 });
 
-// Show the next slide
+
 nextButton.addEventListener("click", () => {
     if (currentSlide < slides.length - 1) {
         currentSlide++;
@@ -53,6 +52,7 @@ nextButton.addEventListener("click", () => {
 setInterval(() => {
     nextButton.click();
 }, 4000); 
+
 
 function updateSlideVisibility() {
     
