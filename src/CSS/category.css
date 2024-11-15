@@ -23,3 +23,25 @@
     right:15px;
 
 }
+/* start pagination  */
+.pagination {
+  margin-top: 32px;
+    justify-self: center; 
+  }
+
+
+  .pagination ul li {
+    /* background-color: white; */
+    color: rgb(4, 4, 24);
+    margin: 6px ;
+
+  }
+
+.pagination ul .selected {
+    background-color: rgb(4, 4, 24);
+    color: white;
+  }
+/* end pagination  */
+
+
+  

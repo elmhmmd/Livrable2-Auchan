@@ -1,1 +1,68 @@
 
+.promo-section{
+    background-image: url('../Assets/Images/1306a3548a79cb20815348110c69d4ee.jpg');
+    height: calc(100vh - 80px);
+    
+}
+
+.promo-section .content button {
+    background-color: #EECD70;
+
+}
+  
+.promo-item{
+    background-image: url('../Assets/Images/blue-background.png');
+
+
+}
+
+.item{
+    background-image: url('../Assets/Images/item-bg.jfif');
+}
+
+.card {
+    background-image: url("../Assets/Images/card-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 660px) {
+    .promo-imgage{
+        display: none;
+    }
+    .content {
+        width: 100%;
+        flex: auto;
+        height: 100%;
+    }
+    .content button{
+        align-self: center;
+        margin-top: 24px;
+    }
+    .promo-section{
+        height: fit-content;
+    }
+   
+    
+}
+/* start pagination  */
+.pagination {
+    margin-top: 32px;
+      justify-self: center; 
+    }
+  
+  
+    .pagination ul li {
+      /* background-color: white; */
+      color: rgb(4, 4, 24);
+      margin: 6px ;
+  
+    }
+  
+  .pagination ul .selected {
+      background-color: rgba(9, 9, 15, 0.735);
+      color: white;
+    }
+  /* end pagination  */
