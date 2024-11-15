@@ -1,46 +1,84 @@
-
-
 let categoriesCont = document.querySelector(".categoriesContainer");
-
-let data = []
+let categoriList = document.querySelector(".category_list");
+let filterSelect = document.querySelector(".filterSelect");
+let selectList = document.querySelector(".selectList");
+let data = [];
+let products = [];
+let uniqueCategorie = [];
 
 const createRatingStars = (rating) => {
   const starLength = Math.fround(rating);
-  
+
   let stars = ``;
   for (let i = 0; i < starLength; i++) {
     stars += '<img src="../Assets/Images/start.png" alt="star" />';
   }
   return stars;
-}
+};
 
+const clearFilter = () => {
+  removeOpenFromAll();
+  RenderCards(products);
+};
 
+const RenderListCat = () => {
+  const categories = new Set();
+  products.forEach((ele) => categories.add(ele.category));
 
-const RenderCards = async () => {
+  uniqueCategorie = Array.from(categories);
 
-  const res = await fetch("http://localhost:3000/products");
-  data = await res.json();
+  let categoryItems = "";
+  let selectItems = "";
+  uniqueCategorie.forEach((cat, idx) => {
+    categoryItems += `<li id='select-${idx}' onClick="onSelectCat(${idx})" class="hover:bg-white font-bold px-3 cursor-pointer py-1 rounded-lg">${cat}</li>`;
+    selectItems += `<li id='select-${idx}' onclick="onSelectCat(${idx})" class="hover:bg-gray-200 transition cursor-pointer p-2 ">${cat}</li>`;
+  });
+  const AllProductlist = ` <li onclick="clearFilter()" class="hover:bg-white font-bold px-3 cursor-pointer py-1 rounded-lg">All</li>`;
+  const AllProductSelect = `<li onclick="clearFilter()" class="hover:bg-gray-200 transition cursor-pointer p-2 ">All</li>`;
 
+  categoriList.innerHTML = AllProductlist;
+  categoriList.innerHTML += categoryItems;
+  selectList = AllProductSelect;
+  selectList.innerHTML += selectItems;
+};
+
+const RenderCards = async (newData) => {
+  if (newData && newData.length >= 1) {
+    data = newData;
+  } else if (!data.length) {
+    const res = await fetch(
+      "https://yc-products-store.vercel.app/?vercelToolbarCode=ecNXJ0KhrTR7eLt"
+    );
+    let response = await res.json();
+    data = response.products;
+    products = data;
+  }
   categoriesCont.classList.add("grid" , "grid-cols-2" , "mt-8" , "md:grid-cols-3" , "lg:grid-cols-4" , "gap-5" , "md:gap-x-10" , "lg:gap-x-20")
   display_grid.classList.add("text-gray-400")
   display_list.classList.remove("text-gray-400")
 
- console.log("this is working")
-  // Set innerHTML to empty string before loop
+ 
+
   categoriesCont.innerHTML = "";
 
   data.map((ele) => {
+    console.log(`${ele.image}`)
     categoriesCont.innerHTML += `
       <div
         class="card product w-full  flex-col justify-between rounded-3xl px-3 py-4 text-white h-[330px] lg:h-[400px] overflow-hidden"
       >
+      <div class="h-56 flex items-center justify-center">
         <img
-          src="${ele.image || "../Assets/Images/t-shirt-placeholder.png"}"
-          alt=""
-          class="w-44 lg:w-52 mx-auto mt-4 rounded-md"
+          src="${ele.image}"
+        
+          alt="this is an"
+          class="w-44 lg:w-52 max-h-full mx-auto mt-4 rounded-md"
         />
+      </div>
         <div>
-          <h1 class="text-lg md:text-xl font-bold text-white mt-3">${ele.title}</h1>
+          <h1 class="text-lg md:text-xl font-bold text-white mt-3">${
+            ele.title
+          }</h1>
           <div class="flex items-center gap-x-1 mt-2 ">
             ${createRatingStars(ele.stars)}
           </div>
@@ -58,12 +96,49 @@ const RenderCards = async () => {
       </div>
     `;
   });
+  if (!newData) {
+    RenderListCat();
+  }
 
   cardsPerPage = 8;
   displayCards();
 
 };
 RenderCards();
+
+const openToggleFilterSelect = () => {
+  filterSelect.toggleAttribute("open");
+};
+
+const onSelectCat = (index) => {
+  const categoryListItem = document.querySelector(
+    `.category_list li#select-${index}`
+  );
+  const selectListItem = document.querySelector(
+    `.selectList li#select-${index}`
+  );
+
+  removeOpenFromAll();
+  if (categoryListItem) categoryListItem.classList.add("selected");
+  if (selectListItem) selectListItem.classList.add("selected");
+
+  filterSelect.toggleAttribute("open", false);
+
+  const selectedCategory =
+    categoryListItem?.textContent || selectListItem?.textContent;
+  const newArr = products.filter((item) => item.category === selectedCategory);
+
+  RenderCards(newArr);
+};
+
+const removeOpenFromAll = () => {
+  document
+    .querySelectorAll(".category_list li, .selectList li")
+    .forEach((item) => {
+      item.classList.toggle("selected", false);
+    });
+};
+
 
 
 
@@ -82,7 +157,7 @@ function activePage() {
     });
     event.target.classList.add("selected")
     currentPage= event.target.value;
-    console.log(currentPage)
+    
     displayCards(); 
 }
 
@@ -129,13 +204,12 @@ function displayCards() {
     let start = (currentPage-1)*cardsPerPage ;
     let end = currentPage*cardsPerPage - 1;
 
-    console.log(cards.length)
+   
     cards.forEach((item , index)=> {
-        console.log(index+"mama")
+        
         if ((index >= start) && (index <= end)) {
           item.classList.remove("hidden");
           item.classList.add("flex");
-          console.log(item)
             // item.style.display = 'flex'
         } else {
           item.classList.remove("flex");
@@ -153,9 +227,11 @@ function displayCards() {
 const display_list =document.querySelector(".display_list")
 const display_grid =document.querySelector(".display_grid")
 const toList = async () => {
-   cardsPerPage = 4;
-  const res = await fetch("http://localhost:3000/products");
-  data = await res.json();
+    const result = await fetch(
+      "https://yc-products-store.vercel.app/?vercelToolbarCode=ecNXJ0KhrTR7eLt"
+    );
+    let response = await result.json();
+    data = response.products;
 
   categoriesCont.classList.remove("grid" , "grid-cols-2" , "mt-8" , "md:grid-cols-3" , "lg:grid-cols-4" , "gap-5" , "md:gap-x-10" , "lg:gap-x-20")
   display_grid.classList.remove("text-gray-400")

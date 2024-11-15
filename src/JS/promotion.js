@@ -14,8 +14,9 @@ const createRatingStars = (rating) => {
 
 
 const RenderCards = async () => {
-    const res = await fetch("http://localhost:3000/products");
-    data = await res.json();
+    const res = await fetch("https://yc-products-store.vercel.app/?vercelToolbarCode=ecNXJ0KhrTR7eLt");
+    let response = await res.json();
+    data = response.products;
   
     // Set innerHTML to empty string before loop
     promo_items.innerHTML = "";
@@ -24,17 +25,17 @@ const RenderCards = async () => {
               <div class="grid grid-cols-3  p-8 grid-rows-2 gap-4 sm:grid-cols-4 ">
             <div class="promo-item  p-3 flex items-center  flex-col rounded-tl-[16px] rounded-bl-[16px] bg-cover bg-center  min-h-fit  col-span-2 row-span-2 ">
                 <img class="w-1/4 my-2" src="../Assets/Images/60-sale.png" alt=" sale off 60%">
-                <img class="w-3/6 mt-2" src="../Assets/Images/parfume.png" alt="parfume image">
+                <img class="w-3/6 mt-2" src="${data[24].image}" alt="parfume image">
                 <div class=" w-[100%] mt-auto">
 
                     <div>
-                        <h1 class=" sm:text-xl font-bold text-white mt-1">${data[4].title}</h1>
+                        <h1 class=" sm:text-xl font-bold text-white mt-1">${data[24].title}</h1>
                         <div class="stars flex items-center sm:gap-x-1 mt-1">
-                          ${createRatingStars(data[4].stars)}
+                          ${createRatingStars(data[24].stars)}
                         </div>
                     </div>
                     <div class="flex w-[100%] justify-between ">
-                        <h3 class="font-semibold self-end text-white sm:text-xl">${data[4].price}Dhs</h3>
+                        <h3 class="font-semibold self-end text-white sm:text-xl">${data[24].price}Dhs</h3>
                         <button class="flex items-center gap-x-1 md:gap-x-4 px-1 md:px-3 py-1 rounded-md text-black font-semibold md:font-bold text-sm md:text-xl  bg-white">
                           <span class=""> Add To Cart </span>
                           <i class="fa-solid fa-cart-shopping text-sm"></i>
@@ -132,8 +133,9 @@ const RenderCards = async () => {
 
 
   const   RenderItems = async () => {
-    const res = await fetch("http://localhost:3000/products");
-    data = await res.json();
+    const res = await fetch("https://yc-products-store.vercel.app/?vercelToolbarCode=ecNXJ0KhrTR7eLt");
+    let response = await res.json();
+    data = response.products;
   
     // Set innerHTML to empty string before loop
     promo_products.innerHTML = "";
