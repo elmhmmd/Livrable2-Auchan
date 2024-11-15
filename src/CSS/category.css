@@ -1,5 +1,5 @@
 
-.background_img {
+.card {
     background-image: url("../Assets/Images/card-background.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -20,7 +20,7 @@
   }
 
 .pagination ul .selected {
-    background-color: rgba(9, 9, 15, 0.735);
+    background-color: rgb(4, 4, 24);
     color: white;
   }
 /* end pagination  */
