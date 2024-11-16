@@ -135,16 +135,25 @@
     </header>
     <main class="container">
       <div class="flex mt-8 lg:mt-20 justify-between items-center">
-        <ul class="category_list hidden md:flex items-center gap-x-4">
-          <li class="hover:bg-white font-bold px-3 py-1 rounded-lg">Clothes</li>
-          <li class="hover:bg-white font-bold px-3 py-1 rounded-lg">Desert</li>
-          <li class="hover:bg-white font-bold px-3 py-1 rounded-lg">food</li>
+        <ul class="category_list hidden md:flex items-center gap-x-4">       
         </ul>
-        <div
-          class="rounded-md text-white cursor-pointer md:hidden px-2 w-36 py-2 flex items-center justify-between font-bold bg-black"
-        >
-          Categories
-          <i class="fa-solid fa-chevron-down"></i>
+        <div class="w-fit relative">
+          <div
+            onclick="openToggleFilterSelect()"
+            class="filterSelect group rounded-md peer text-white cursor-pointer md:hidden px-2 w-36 py-2 flex items-center justify-between font-bold bg-black"
+          >
+            Categories
+            <i
+              class="fa-solid fa-chevron-down rotate-0 transition group-open:rotate-180"
+            ></i>
+          </div>
+
+          <div
+            class="w-52 transition absolute mt-2 flex-wrap hidden bg-white rounded-md peer-open:flex lg:peer-open:flex"
+          >
+            <ul class="selectList w-full">
+            </ul>
+          </div>
         </div>
         <div class="flex items-center gap-x-5">
           <i class="fa-solid fa-filter text-2xl cursor-pointer"></i>
@@ -154,37 +163,9 @@
           ></i>
         </div>
       </div>
-      <div class="categoriesContainer grid grid-cols-2 mt-8 md:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-x-10 lg:gap-x-20">
-        <div
-          class="card w-full flex flex-col justify-between  rounded-3xl px-3 py-4 text-white h-[400px] overflow-hidden"
-        >
-          <img
-            src="../Assets/Images/t-shirt-placeholder.png"
-            alt=""
-            class="w-52 mx-auto mt-4 rounded-md"
-          />
-          <div>
-            <h1 class="text-xl font-bold text-white mt-3">Polo t-shirt</h1>
-            <div class="stars flex items-center gap-x-1 mt-3">
-              <img src="../Assets/Images/start.png" alt="" />
-              <img src="../Assets/Images/start.png" alt="" />
-              <img src="../Assets/Images/start.png" alt="" />
-              <img src="../Assets/Images/start.png" alt="" />
-              <img src="../Assets/Images/start.png" alt="" />
-            </div>
-          </div>
-          <div class="flex items-center justify-between">
-            <h3 class="font-semibold text-xl">30$</h3>
-            <button
-              class="flex items-center gap-x-4 px-3 py-1 rounded-md text-black font-bold bg-white"
-            >
-              <span class="-mt-1"> Add To Cart </span>
-
-              <i class="fa-solid fa-cart-shopping text-sm m-0"></i>
-            </button>
-          </div>
-        </div>
-      </div>
+      <div
+        class="categoriesContainer grid grid-cols-2 mt-8 lg:grid-cols-3 xl:grid-cols-4 gap-5 md:gap-x-10 lg:gap-x-20"
+      ></div>
     </main>
   </body>
 </html>
