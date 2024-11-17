@@ -55,3 +55,16 @@ if (!message.value.trim()) {
 
 return isValid;
 }
+
+// soumission du formulaire
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+  event.preventDefault(); // Empêcher la soumission par défaut
+
+  // Vérifier si le formulaire est valide
+  if (validateForm()) {
+      alert("Votre message a été envoyé avec succès !");
+      clearForm(); // Vider le formulaire après soumission
+  } else {
+      alert("Veuillez remplir tous les champs correctement.");
+  }
+});
