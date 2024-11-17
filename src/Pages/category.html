@@ -18,121 +18,67 @@
     />
   </head>
   <body class="bg-[#D7D8E3]">
-    <header class="bg-[#22262D] pt-2 px-4">
-      <div
-        class="nav-links left-[-100%] p-8 p gap-12 text-white flex flex-col absolute top-0 h-screen w-full bg-black/65 backdrop-blur-sm transition-all duration-1000 ease-in-out"
-      >
-        <div class="flex items-center gap-4 pr-12">
-          <div
-            class="profile-img w-[2.5rem] h-[2.5rem] rounded-full overflow-hidden"
-          >
-            <img
-              class="h-full w-full object-cover"
-              src="../Assets/Images/Profile_picture.jpg"
-              alt="Profile"
-            />
+    <header class="bg-[#22262D] pt-2 px-4 ">
+
+      <div class="nav-links left-[-100%] p-8 p gap-12 z-20 text-white flex flex-col absolute top-0 h-screen w-full bg-black/65 backdrop-blur-sm   transition-all duration-1000 ease-in-out ">
+          <div class="  flex items-center gap-4   "> 
+              <div class=" profile-img w-[2.5rem] h-[2.5rem] rounded-full overflow-hidden">
+                  <img class="h-full w-full object-cover" src="../Assets/Images/Profile_picture.jpg" alt="Profile">
+              </div>
+              <i class="ri-notification-fill text-xl cursor-pointer"></i>
+              <i class="ri-shopping-cart-line text-xl cursor-pointer"></i>
+              <p class="wallet text-sm">$0.00</p>
+              <i  class="  close-icon  fa-regular fa-circle-xmark ml-auto text-3xl text-[#D7D8E3] cursor-pointer"></i>
+              
           </div>
-          <i class="ri-notification-fill text-xl cursor-pointer"></i>
-          <i class="ri-shopping-cart-line text-xl cursor-pointer"></i>
-          <p class="wallet text-sm">$0.00</p>
-          <i
-            class="close-icon fa-regular fa-circle-xmark ml-auto text-3xl cursor-pointer"
-          ></i>
-        </div>
 
-        <ul
-          class="flex flex-col font-bold text-lg w-fit justify-center sm:justify-start gap-6 sm:gap-8"
-        >
-          <li
-            class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
-          >
-            Home
-          </li>
-          <li
-            class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
-          >
-            Categories
-          </li>
-          <li
-            class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
-          >
-            Promotions
-          </li>
-          <li
-            class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
-          >
-            Contact us
-          </li>
-        </ul>
-      </div>
-
-      <div
-        class="container flex flex-wrap justify-between items-center text-white p-4"
-      >
-        <!-- Logo -->
-        <div class="max-w-[120px] sm:mb-0">
-          <img
-            src="../assets/Images/Black_White_Minimal_Simple_Modern_Creative_Studio_Ego_Logo-removebg-preview.png"
-            alt="Logo"
-          />
-        </div>
-
-        <!-- Navigation -->
-        <nav class="w-full sm:w-auto links">
-          <ul
-            class="flex justify-center sm:justify-start gap-6 sm:gap-8 text-sm w-full"
-          >
-            <li
-              class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
-            >
-              Home
-            </li>
-            <li
-              class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
-            >
-              Categories
-            </li>
-            <li
-              class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
-            >
-              Promotions
-            </li>
-            <li
-              class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
-            >
-              Contact us
-            </li>
+          <ul class="flex flex-col font-semibold text-lg  w-fit  justify-center sm:justify-start gap-6 sm:gap-8  ">
+              <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500"><a href="../Pages/index.html">Home</a></li>
+              <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500"><a href="../Pages/category.html">Categories</a></li>
+              <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500"><a href="../Pages/promotion.html">Promotions</a></li>
+              <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500"> <a href="../Pages/contact.html">Contact us</a></li>
           </ul>
-        </nav>
 
-        <!-- Right Section (Notification, Cart, Wallet, Profile) -->
-        <div class="flex gap-4 items-center sm:mt-0">
-          <div class="header-tools gap-4">
-            <i class="ri-notification-fill text-xl cursor-pointer"></i>
-            <i class="ri-shopping-cart-line text-xl cursor-pointer"></i>
-            <p class="wallet text-sm">$0.00</p>
-          </div>
-
-          <div
-            class="burger-icon h-5 w-7 flex flex-col justify-between cursor-pointer"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-          <div
-            class="profile-img w-[2.5rem] h-[2.5rem] rounded-full overflow-hidden"
-          >
-            <img
-              class="h-full w-full object-cover"
-              src="../Assets/Images/Profile_picture.jpg"
-              alt="Profile"
-            />
-          </div>
-        </div>
       </div>
-    </header>
+
+      <div class="container    flex flex-wrap justify-between items-center text-white p-4"> 
+                  <!-- Logo -->
+      <div class="max-w-[120px] mb-4 sm:mb-0">
+          <img src="../Assets/Images/Black_White_Minimal_Simple_Modern_Creative_Studio_Ego_Logo-removebg-preview.png" alt="Logo">
+      </div>
+
+      <!-- Navigation -->
+      <nav class="w-full sm:w-auto links ">
+          <ul class="flex justify-center sm:justify-start gap-6 sm:gap-8 text-sm w-full">
+              <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500"><a href="../Pages/index.html">Home</a></li>
+              <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500"><a href="../Pages/category.html">Categories</a></li>
+              <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500"><a href="../Pages/promotion.html">Promotions</a></li>
+              <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500"> <a href="../Pages/contact.html">Contact us</a></li>
+          </ul>
+      </nav>
+
+      <!-- Right Section (Notification, Cart, Wallet, Profile) -->
+      <div class="flex gap-4 items-center  sm:mt-0">
+          <div class=" header-tools gap-4 "> 
+              <i class="ri-notification-fill text-xl cursor-pointer"></i>
+              <i class="ri-shopping-cart-line text-xl cursor-pointer"></i>
+              <p class="wallet text-sm">$0.00</p>
+          </div>
+
+          <div class="burger-icon h-5 w-7  flex-col justify-between cursor-pointer ">
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+      
+          <div class=" profile-img w-[2.5rem] h-[2.5rem] rounded-full overflow-hidden">
+              <img class="h-full w-full object-cover" src="../Assets/Images/Profile_picture.jpg" alt="Profile">
+          </div>
+      </div>
+      
+
+      </div>
+  </header>
     <main class="container">
       <div class="flex mt-8 lg:mt-20 justify-between items-center">
         <ul class="category_list hidden md:flex items-center gap-x-4">       
@@ -157,15 +103,47 @@
         </div>
         <div class="flex items-center gap-x-5">
           <i class="fa-solid fa-filter text-2xl cursor-pointer"></i>
-          <i class="fa-solid fa-list text-2xl cursor-pointer"></i>
-          <i
-            class="fa-solid fa-table-cells text-2xl text-gray-400 cursor-pointer"
-          ></i>
+          <i onclick="toList()" class="display_list fa-solid fa-list text-2xl cursor-pointer"></i>
+          <i onclick="RenderCards()" class="display_grid fa-solid fa-table-cells text-2xl text-gray-400 cursor-pointer"></i>
         </div>
       </div>
-      <div
-        class="categoriesContainer grid grid-cols-2 mt-8 lg:grid-cols-3 xl:grid-cols-4 gap-5 md:gap-x-10 lg:gap-x-20"
-      ></div>
+      <div class="categoriesContainer grid grid-cols-2 mt-8 md:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-x-10 lg:gap-x-20">
+        <div class="card w-full flex flex-col justify-between  rounded-3xl px-3 py-4 text-white h-[400px] overflow-hidden">
+          <img src="../Assets/Images/t-shirt-placeholder.png" alt="" class="w-52 mx-auto mt-4 rounded-md" />
+          <div>
+            <h1 class="text-xl font-bold text-white mt-3">Polo t-shirt</h1>
+            <div class="stars flex items-center gap-x-1 mt-3">
+              <img src="../Assets/Images/start.png" alt="" />
+              <img src="../Assets/Images/start.png" alt="" />
+              <img src="../Assets/Images/start.png" alt="" />
+              <img src="../Assets/Images/start.png" alt="" />
+              <img src="../Assets/Images/start.png" alt="" />
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-xl">30$</h3>
+            <button
+              class="flex items-center gap-x-4 px-3 py-1 rounded-md text-black font-bold bg-white"
+            >
+              <span class="-mt-1"> Add To Cart </span>
+
+              <i class="fa-solid fa-cart-shopping text-sm m-0"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- this is the pagination -->
+      <div class="pagination  w-fit ">
+        <ul>
+            <li onclick="prevPage()" class="chevron fas fa-chevron-left  inline-block   cursor-pointer w-7 h-7 text-center align-middle transition-all duration-600 ease-in-out text-lg font-extrabold border-0 bg-transparent" value="previues"></li>
+            <li onclick="activePage()" class="selected inline-block bg-white border-2 border-[#040418] rounded-full cursor-pointer w-7 h-7 text-center align-middle transition-all duration-600 ease-in-out" value="1">1</li>
+            <li onclick="activePage()" class="inline-block border-2 bg-white border-[#040418] rounded-full cursor-pointer w-7 h-7 text-center align-middle transition-all duration-600 ease-in-out" value="2">2</li>
+            <li onclick="activePage()" class="inline-block  border-2 bg-white border-[#040418]  rounded-full cursor-pointer w-7 h-7 text-center align-middle transition-all duration-600 ease-in-out" value="3" >3</li>
+            <li onclick="nextPage()" class="chevron fas fa-chevron-right inline-block   cursor-pointer w-7 h-7 text-center align-middle transition-all duration-600 ease-in-out text-lg font-extrabold border-0 bg-transparent " value="next"></li>
+        </ul>
+    </div>
+      <!-- end of pagination -->
+
     </main>
   </body>
 </html>
