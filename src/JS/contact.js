@@ -15,3 +15,8 @@ function validateForm() {
   const email = document.getElementById("email");
   const phone = document.getElementById("phone");
   const message = document.getElementById("message");
+
+  //  add Regex
+  const nameRegex = /^[a-zA-Z\s]+$/; // Lettres et espaces
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Format email simple
+  const phoneRegex = /^[0-9]{10,}$/; // Minimum 10 chiffres
