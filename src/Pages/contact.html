@@ -14,7 +14,7 @@
     <script src="../JS/script.js" defer></script>
     
 </head>
-<body class="bg-[#D7D8E3]">
+<body class="bg-white]">
 
     <header class="bg-[#22262D] pt-2 px-4 ">
 
@@ -85,35 +85,37 @@
       <p class="text-black-500 mt-3 font-medium text-xl sm:text-2xl">Our team of customer care is ready to hear from you.</p>
     </div>
 
+  </section>
 
-    <div class="lg:flex lg:space-x-8">
+
+  <section >
+    <div class="  lg:flex justify-center justify-self-center gap-8 mt-6 mb-8">
         <!-- Contact Form -->
-        <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg w-full lg:w-1/2">
+        <div class="bg-white p-6 sm:p-8 rounded-lg border shadow-lg w-full lg:w-[50%]">
           <h3 class="text-2xl font-semibold mb-4 text-gray-800">Reach out to us!</h3>
-          <p class="text-gray-600 mb-6">Got a question about Lander? Interested in partnering with us? Contact us:</p>
+          <p class="text-gray-600 mb-6">Got a question about Lander? Interested in partnering with us? contact us!</p>
+          <form id="contactForm" class="space-y-4 ">
+            <input type="text" placeholder="Full name" class="w-full p-3 border border-black rounded focus:outline-none focus:border-gray-400 rounded-lg " id="name">
+            <input type="email" placeholder="Your Email address" class="w-full p-3 border border-black rounded focus:outline-none focus:border-gray-400 rounded-lg" id="email">
+            <input type="tel" placeholder="Phone number" class="w-full p-3 border border-black rounded focus:outline-none focus:border-gray-400 rounded-lg" id="phone">
+            <textarea placeholder="Message..." class="w-full p-3 border border-black rounded focus:outline-none focus:border-gray-400 rounded-lg" rows="5" id="message"></textarea>
 
-          <form id="contactForm" class="space-y-4">
-            <input type="text" placeholder="Full name" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-gray-400" id="name">
-            <input type="email" placeholder="Your Email address" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-gray-400" id="email">
-            <input type="tel" placeholder="Phone number" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-gray-400" id="phone">
-            <textarea placeholder="Message..." class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-gray-400" rows="5" id="message"></textarea>
-
-            <div class="flex space-x-4">
-                <button type="button" class="px-6 py-2 bg-gray-600 text-white rounded" onclick="clearForm()">Fill</button>
+            <div class="flex justify-self-end space-x-4">
+                <button type="button" class="px-6 py-2 bg-black text-white rounded" onclick="fillForm()">Fill</button>
                 <button type="submit" class="px-6 py-2 bg-black text-white rounded">Submit</button>
               </div>
             </form>
           </div>
 
           <!-- Customer Care Information -->
-      <div class="bg-gray-200 p-6 sm:p-8 rounded-lg shadow-lg w-full lg:w-1/2 mt-8 lg:mt-0">
+      <div class="bg-gray-200 p-6 sm:p-8 rounded-lg shadow-lg w-full lg:w-[35%] mt-8 lg:mt-0">
         <h3 class="text-2xl font-semibold mb-4 text-gray-800">Customer care</h3>
         <p class="text-gray-600 mb-6">An urgent request? We are here to listen to you.</p>
 
         <div class="space-y-6">
           <!-- Contact 1 -->
           <div class="flex items-center space-x-4">
-            <img src="https://via.placeholder.com/50" alt="Claudio Pierantonio" class="w-12 h-12 rounded-full">
+            <img src="../Assets/Images/support1 (1).jpg" alt="John Pierantonio" class="w-14 h-14 border-black border-2 rounded-full">
             <div>
               <p class="font-semibold text-gray-800">Claudio Pierantonio</p>
               <p class="text-gray-600">Customer care</p>
@@ -123,7 +125,7 @@
 
           <!-- Contact 2 -->
           <div class="flex items-center space-x-4">
-            <img src="https://via.placeholder.com/50" alt="Noelia Rosemberg" class="w-12 h-12 rounded-full">
+            <img src="../Assets/Images/supportcare.jpg" alt="Natalie Rosemberg" class="w-14 h-14 border-black border-2 rounded-full">
             <div>
               <p class="font-semibold text-gray-800">Noelia Rosemberg</p>
               <p class="text-gray-600">Customer care Lead</p>
@@ -134,45 +136,15 @@
 
         <!-- Quick Links -->
         <div class="mt-8 space-y-2">
-          <a href="#" class="block text-gray-600 hover:text-gray-800">Track your order</a>
+          <a href="#" class="block text-gray-600 font-bold hover:text-gray-800">Track your order</a>
           <a href="#" class="block text-gray-600 hover:text-gray-800">View all your orders</a>
           <a href="#" class="block text-gray-600 hover:text-gray-800">Manage your addresses</a>
-          <a href="#" class="block text-gray-600 hover:text-gray-800">Login</a>
-          <a href="#" class="block text-gray-600 hover:text-gray-800">Create an account</a>
+          <a href="#" class="block text-gray-600 font-semibold pt-6 hover:text-gray-800">Login</a>
+          <a href="#" class="block text-gray-600 font-semibold hover:text-gray-800">Create an account</a>
         </div>
       </div>
     </div>
   </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- Footer  -->
     <footer class="bg-[#22262D] ">
         <div class="container flex justify-around items-center p-8 flex-col md:flex-row">
