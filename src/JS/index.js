@@ -64,3 +64,48 @@ function updateSlideVisibility() {
         }
     });
 }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const sections = [
+      document.getElementById('grid-section1'),
+      document.getElementById('grid-section2'),
+      document.getElementById('grid-section3')
+    ];
+  
+    const pageButtons = [
+      document.getElementById('page1'),
+      document.getElementById('page2'),
+      document.getElementById('page3')
+    ];
+  
+    
+    function updatePagination(pageIndex) {
+     
+      for (let i = 0; i < sections.length; i++) {
+        sections[i].classList.add('hidden');
+      }
+  
+     
+      sections[pageIndex].classList.remove('hidden');
+  
+     
+      for (let i = 0; i < pageButtons.length; i++) {
+        pageButtons[i].classList.remove('bg-black');
+        pageButtons[i].classList.add('bg-[#D7D8E3]');
+      }
+  
+      pageButtons[pageIndex].classList.add('bg-black');
+      pageButtons[pageIndex].classList.remove('bg-[#D7D8E3]');
+    }
+  
+ 
+    pageButtons.forEach((button, index) => {
+      button.addEventListener('click', function () {
+        updatePagination(index); 
+      });
+    });
+  
+    updatePagination(0);
+  });
+  
