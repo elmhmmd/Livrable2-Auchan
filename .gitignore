@@ -1,3 +1,9 @@
 node_modules
+<<<<<<< HEAD
 ./CSS/output.css
 output.css 
+=======
+node_modules
+./CSS/output.css
+output.css
+>>>>>>> 7c720b8095cd4d31501b4b6759a736e0fbe75d0b
