@@ -161,7 +161,7 @@ const RenderListCat = () => {
   categoriList.innerHTML += categoryItems;
   selectList.innerHTML = AllProductSelect;
   selectList.innerHTML += selectItems;
-  console.log(selectList)
+
 };
 
 const RenderCards = async (newData) => {
@@ -175,7 +175,7 @@ const RenderCards = async (newData) => {
     data = response.products;
     products = data;
   }
-
+ 
   categoriesCont.innerHTML = "";
 
   for(let i = 0;i< 4;i++){
@@ -251,3 +251,4 @@ const removeOpenFromAll = () => {
       item.classList.toggle("selected", false);
     });
 };
+
