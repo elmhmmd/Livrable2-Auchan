@@ -40,6 +40,22 @@
 .sliderOne{
     background-image: url("../Assets/Images/background-slider.jpg");
     width: 90%;
+   
+  
+}
+
+.topProducts{
+    background-image: url("../Assets/Images/gettyimages-1487257611-640x640.jpg");
+    
+
 }
 
 
+
+
+.card {
+    background-image: url("../Assets/Images/card-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
