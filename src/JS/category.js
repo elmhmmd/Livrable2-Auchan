@@ -38,8 +38,9 @@ const RenderListCat = () => {
 
   categoriList.innerHTML = AllProductlist;
   categoriList.innerHTML += categoryItems;
-  selectList = AllProductSelect;
+  selectList.innerHTML = AllProductSelect;
   selectList.innerHTML += selectItems;
+  console.log(selectList)
 };
 
 const RenderCards = async (newData) => {
