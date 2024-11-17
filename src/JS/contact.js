@@ -20,3 +20,38 @@ function validateForm() {
   const nameRegex = /^[a-zA-Z\s]+$/; // Lettres et espaces
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Format email simple
   const phoneRegex = /^[0-9]{10,}$/; // Minimum 10 chiffres
+
+  // Validation Nom
+  if (!name.value.trim() || !nameRegex.test(name.value)) {
+    name.style.borderColor = "red";
+    isValid = false;
+} else {
+    name.style.borderColor = ""; // Réinitialisation
+}
+
+// Validation Email
+if (!email.value.trim() || !emailRegex.test(email.value)) {
+    email.style.borderColor = "red";
+    isValid = false;
+} else {
+    email.style.borderColor = "";
+}
+
+// Validation Téléphone
+if (!phone.value.trim() || !phoneRegex.test(phone.value)) {
+    phone.style.borderColor = "red";
+    isValid = false;
+} else {
+    phone.style.borderColor = "";
+}
+
+// Validation Message
+if (!message.value.trim()) {
+    message.style.borderColor = "red";
+    isValid = false;
+} else {
+    message.style.borderColor = "";
+}
+
+return isValid;
+}
