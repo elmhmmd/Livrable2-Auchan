@@ -5,3 +5,43 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.category_list li.selected {
+    background-color: white
+}
+.selectList li.selected {
+    background: #e5e7eb;
+    position: relative;
+}
+
+
+.selectList li.selected::after {
+    position: absolute;
+    content: "✅";
+    width: 10px;
+    height: 10px;
+    right:15px;
+
+}
+/* start pagination  */
+.pagination {
+  margin-top: 32px;
+    justify-self: center; 
+  }
+
+
+  .pagination ul li {
+    /* background-color: white; */
+    color: rgb(4, 4, 24);
+    margin: 6px ;
+
+  }
+
+.pagination ul .selected {
+    background-color: rgb(4, 4, 24);
+    color: white;
+  }
+/* end pagination  */
+
+
+  
