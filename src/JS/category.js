@@ -282,8 +282,9 @@ const dynamicPagination = (data)=> {
 
   let pagination = document.querySelector(".pagination");
   let list = document.createElement("ul");
+  list.classList.add("flex" , "items-center")
 
-  list.innerHTML = `<li onclick="prevPage()" class="chevron fas fa-chevron-left  inline-block   cursor-pointer w-7 h-7 text-center align-middle transition-all duration-600 ease-in-out text-lg font-extrabold border-0 bg-transparent" value="previous"></li>`
+  list.innerHTML = `<li onclick="prevPage()" class="chevron fas fa-chevron-left  inline-block  py-[5px] cursor-pointer w-7 h-7 text-center align-middle transition-all duration-600 ease-in-out text-lg font-extrabold border-0 bg-transparent" value="previous"></li>`
   for (let i = 1; i <= numberPages; i++) {
     if (i == currentPage) {
       list.innerHTML += `<li onclick="activePage()" class="selected inline-block border-2 bg-white border-[#040418] rounded-full cursor-pointer w-7 h-7 text-center align-middle transition-all duration-600 ease-in-out" value="${i}">${i}</li>`
@@ -292,7 +293,7 @@ const dynamicPagination = (data)=> {
       list.innerHTML += `<li onclick="activePage()" class="inline-block border-2 bg-white border-[#040418] rounded-full cursor-pointer w-7 h-7 text-center align-middle transition-all duration-600 ease-in-out" value="${i}">${i}</li>`
     }
   }
-  list.innerHTML += `<li onclick="nextPage()" class="chevron fas fa-chevron-right inline-block   cursor-pointer w-7 h-7 text-center align-middle transition-all duration-600 ease-in-out text-lg font-extrabold border-0 bg-transparent " value="next"></li>`
+  list.innerHTML += `<li onclick="nextPage()" class="chevron fas fa-chevron-right inline-block  py-[5px] cursor-pointer w-7 h-7 text-center align-middle transition-all duration-600 ease-in-out text-lg font-extrabold border-0 bg-transparent " value="next"></li>`
 
   pagination.innerHTML = ` `;
   pagination.appendChild(list)

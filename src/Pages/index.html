@@ -21,121 +21,67 @@
   </head>
   <body class="bg-[#D7D8E3]">
     <!-- header -->
-    <header class="bg-[#22262D] pt-2 px-4">
-      <div
-        class="nav-links left-[-100%] p-8 p gap-12 text-white flex flex-col absolute top-0 h-screen w-full bg-black/65 backdrop-blur-sm transition-all duration-1000 ease-in-out"
-      >
-        <div class="flex items-center gap-4 pr-12">
-          <div
-            class="profile-img w-[2.5rem] h-[2.5rem] rounded-full overflow-hidden"
-          >
-            <img
-              class="h-full w-full object-cover"
-              src="./Assets/Images/Profile_picture.jpg"
-              alt="Profile"
-            />
+    <header class="bg-[#22262D] pt-2 px-4 ">
+
+      <div class="nav-links left-[-100%] p-8 p gap-12 z-20 text-white flex flex-col absolute top-0 h-screen w-full bg-black/65 backdrop-blur-sm   transition-all duration-1000 ease-in-out ">
+          <div class="  flex items-center gap-4   "> 
+              <div class=" profile-img w-[2.5rem] h-[2.5rem] rounded-full overflow-hidden">
+                  <img class="h-full w-full object-cover" src="../Assets/Images/Profile_picture.jpg" alt="Profile">
+              </div>
+              <i class="ri-notification-fill text-xl cursor-pointer"></i>
+              <i class="ri-shopping-cart-line text-xl cursor-pointer"></i>
+              <p class="wallet text-sm">$0.00</p>
+              <i  class="  close-icon  fa-regular fa-circle-xmark ml-auto text-3xl text-[#D7D8E3] cursor-pointer"></i>
+              
           </div>
-          <i class="ri-notification-fill text-xl cursor-pointer"></i>
-          <i class="ri-shopping-cart-line text-xl cursor-pointer"></i>
-          <p class="wallet text-sm">$0.00</p>
-          <i
-            class="close-icon fa-regular fa-circle-xmark ml-auto text-3xl cursor-pointer"
-          ></i>
-        </div>
 
-        <ul
-          class="flex flex-col font-bold text-lg w-fit justify-center sm:justify-start gap-6 sm:gap-8"
-        >
-          <li
-            class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
-          >
-            Home
-          </li>
-          <li
-            class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
-          >
-            Categories
-          </li>
-          <li
-            class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
-          >
-            Promotions
-          </li>
-          <li
-            class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
-          >
-            Contact us
-          </li>
-        </ul>
-      </div>
-
-      <div
-        class="container flex flex-wrap justify-between items-center text-white p-4"
-      >
-        <!-- Logo -->
-        <div class="max-w-[120px] mb-4 sm:mb-0">
-          <img
-            src="../Assets/Images/Black_White_Minimal_Simple_Modern_Creative_Studio_Ego_Logo-removebg-preview.png"
-            alt="Logo"
-          />
-        </div>
-
-        <!-- Navigation -->
-        <nav class="w-full sm:w-auto links">
-          <ul
-            class="flex justify-center sm:justify-start gap-6 sm:gap-8 text-sm w-full"
-          >
-            <li
-              class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
-            >
-              Home
-            </li>
-            <li
-              class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
-            >
-              Categories
-            </li>
-            <li
-              class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
-            >
-              Promotions
-            </li>
-            <li
-              class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
-            >
-              Contact us
-            </li>
+          <ul class="flex flex-col font-semibold text-lg  w-fit  justify-center sm:justify-start gap-6 sm:gap-8  ">
+              <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500"><a href="./index.html">Home</a></li>
+              <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500"><a href="./category.html">Categories</a></li>
+              <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500"><a href="./promotion.html">Promotions</a></li>
+              <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500"> <a href="./contact.html">Contact us</a></li>
           </ul>
-        </nav>
 
-        <!-- Right Section (Notification, Cart, Wallet, Profile) -->
-        <div class="flex gap-4 items-center sm:mt-0">
-          <div class="header-tools gap-4">
-            <i class="ri-notification-fill text-xl cursor-pointer"></i>
-            <i class="ri-shopping-cart-line text-xl cursor-pointer"></i>
-            <p class="wallet text-sm">$0.00</p>
-          </div>
-
-          <div
-            class="burger-icon h-5 w-7 flex flex-col justify-between cursor-pointer"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-          <div
-            class="profile-img w-[2.5rem] h-[2.5rem] rounded-full overflow-hidden"
-          >
-            <img
-              class="h-full w-full object-cover"
-              src="../Assets/Images/Profile_picture.jpg"
-              alt="Profile"
-            />
-          </div>
-        </div>
       </div>
-    </header>
+
+      <div class="container    flex flex-wrap justify-between items-center text-white p-4"> 
+                  <!-- Logo -->
+      <div class="max-w-[120px] mb-4 sm:mb-0">
+          <img src="../Assets/Images/Black_White_Minimal_Simple_Modern_Creative_Studio_Ego_Logo-removebg-preview.png" alt="Logo">
+      </div>
+
+      <!-- Navigation -->
+      <nav class="w-full sm:w-auto links ">
+          <ul class="flex justify-center sm:justify-start gap-6 sm:gap-8 text-sm w-full">
+              <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500"><a href="../Pages/index.html">Home</a></li>
+              <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500"><a href="../Pages/category.html">Categories</a></li>
+              <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500"><a href="../Pages/promotion.html">Promotions</a></li>
+              <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500"> <a href="../Pages/contact.html">Contact us</a></li>
+          </ul>
+      </nav>
+
+      <!-- Right Section (Notification, Cart, Wallet, Profile) -->
+      <div class="flex gap-4 items-center  sm:mt-0">
+          <div class=" header-tools gap-4 "> 
+              <i class="ri-notification-fill text-xl cursor-pointer"></i>
+              <i class="ri-shopping-cart-line text-xl cursor-pointer"></i>
+              <p class="wallet text-sm">$0.00</p>
+          </div>
+
+          <div class="burger-icon h-5 w-7  flex-col justify-between cursor-pointer ">
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+      
+          <div class=" profile-img w-[2.5rem] h-[2.5rem] rounded-full overflow-hidden">
+              <img class="h-full w-full object-cover" src="../Assets/Images/Profile_picture.jpg" alt="Profile">
+          </div>
+      </div>
+      
+
+      </div>
+  </header>
 
     <!-- Slider Section -->
     <section
@@ -263,7 +209,7 @@
         Trending Products
       </h3>
     </div>
-    <!-- line -->
+
 
     <!-- Trending Product Section -->
 
@@ -289,6 +235,7 @@
               Bluetooth, ordinateur portable, électronique, microphone.
             </p>
             <div class="flex justify-between items-center">
+              
               <p class="text-[#D7D8E3]">15$</p>
               <a
                 href="#"
@@ -748,14 +695,21 @@
       </div>
     </section>
 
+
+    
+
+    <!-- line -->
     <div class="relative">
         <hr class="border-t-2 border-black w-11/12 mx-auto" />
         <h3
           class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center bg-[#D7D8E3] px-2"
         >
-          Trending Products
+          Categorys
         </h3>
       </div>
+
+
+
       <div class="container my-20">
           <div class="flex mt-10 justify-between items-center">
               <ul class="category_list hidden md:flex items-center gap-x-4">       
@@ -789,6 +743,8 @@
                 </button>
           </div>
       </div>
+
+
     
     <!-- line -->
     <div class="relative">
@@ -841,31 +797,43 @@
       </div>
     </section>
 
+
+
     <footer class="bg-[#22262D]">
       <div
         class="container flex justify-around items-center p-8 flex-col md:flex-row"
       >
         <img
-          class="w-40 pb-12"
+          class="w-40 pb-12 "
           src="../Assets/Images/Black_White_Minimal_Simple_Modern_Creative_Studio_Ego_Logo-removebg-preview.png"
           alt="logo"
         />
-        <div class="flex gap-32 text-white md:flex-row">
+        <div class="h-40 w-1 bg-white hidden sm:block">
+
+        </div>
+
+        <div class="flex gap-12 text-white md:flex-row">
           <div class="mb-4">
             <h1 class="text-xl font-medium pb-2">Quick Links</h1>
             <ul>
-              <li class="pb-1">Home</li>
-              <li class="pb-1">Promotions</li>
-              <li class="pb-1">Categorys</li>
-              <li class="pb-1">Contact Us</li>
+              <a href="./index.html"><li class="pb-1 hover:underline transition-all duration-400 hover:cursor-pointer">Home</li></a>
+              <a href="./promotion.html"><li class="pb-1 hover:underline transition-all duration-400 hover:cursor-pointer">Promotions</li></a>
+              <a href="./category.html"><li class="pb-1 hover:underline transition-all duration-400 hover:cursor-pointer">Categorys</li></a>
+              <a href="./contact.html"><li class="pb-1 hover:underline transition-all duration-400 hover:cursor-pointer">Contact Us</li></a>
             </ul>
           </div>
+
+          <div class="h-40 w-1 bg-white sm:hidden">
+
+          </div>
+
+
           <div class="mb-4">
             <h1 class="text-xl font-medium pb-2">Social Media</h1>
             <ul>
-              <li class="pb-1">Facebook</li>
-              <li class="pb-1">Instagram</li>
-              <li class="pb-1">Twitter</li>
+              <a href="#"><li class="pb-1 hover:underline transition-all duration-400 hover:cursor-pointer"><i class="fa-brands fa-facebook pr-2"></i>Facebook</li></a>
+              <a href="#"><li class="pb-1 hover:underline transition-all duration-400 hover:cursor-pointer"><i class="fa-brands fa-instagram pr-2"></i>Instagram</li></a>
+              <a href="#"><li class="pb-1 hover:underline transition-all duration-400 hover:cursor-pointer"><i class="fa-brands fa-twitter pr-2"></i>Twitter</li></a>
             </ul>
           </div>
         </div>
