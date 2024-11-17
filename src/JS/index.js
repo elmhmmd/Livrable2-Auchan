@@ -13,7 +13,7 @@ document.querySelector(".close-icon").addEventListener("click", function () {
 
 
 
-// Select elements
+// slider section function
 const prevButton = document.getElementById("prev");
 const nextButton = document.getElementById("next");
 const sliderContainer = document.querySelector(".slider-container");
@@ -66,6 +66,10 @@ function updateSlideVisibility() {
 }
 
 
+
+
+// top product section functions
+
 document.addEventListener('DOMContentLoaded', function () {
     const sections = [
       document.getElementById('grid-section1'),
@@ -108,7 +112,12 @@ document.addEventListener('DOMContentLoaded', function () {
   
     updatePagination(0);
   });
-  
+
+
+
+
+
+  // categorys section functions
 
   let categoriesCont = document.querySelector(".categoriesContainer");
 let categoriList = document.querySelector(".category_list");
