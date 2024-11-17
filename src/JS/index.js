@@ -13,7 +13,7 @@ document.querySelector(".close-icon").addEventListener("click", function () {
 
 
 
-// Select elements
+// slider section function
 const prevButton = document.getElementById("prev");
 const nextButton = document.getElementById("next");
 const sliderContainer = document.querySelector(".slider-container");
@@ -66,6 +66,10 @@ function updateSlideVisibility() {
 }
 
 
+
+
+// top product section functions
+
 document.addEventListener('DOMContentLoaded', function () {
     const sections = [
       document.getElementById('grid-section1'),
@@ -108,7 +112,12 @@ document.addEventListener('DOMContentLoaded', function () {
   
     updatePagination(0);
   });
-  
+
+
+
+
+
+  // categorys section functions
 
   let categoriesCont = document.querySelector(".categoriesContainer");
 let categoriList = document.querySelector(".category_list");
@@ -152,7 +161,7 @@ const RenderListCat = () => {
   categoriList.innerHTML += categoryItems;
   selectList.innerHTML = AllProductSelect;
   selectList.innerHTML += selectItems;
-  console.log(selectList)
+
 };
 
 const RenderCards = async (newData) => {
@@ -166,13 +175,13 @@ const RenderCards = async (newData) => {
     data = response.products;
     products = data;
   }
-
+ 
   categoriesCont.innerHTML = "";
 
   for(let i = 0;i< 4;i++){
     categoriesCont.innerHTML += `
     <div
-      class="card w-full flex flex-col justify-between rounded-3xl px-3 py-4 text-white h-[330px] lg:h-[400px] overflow-hidden"
+      class="card w-full flex flex-col justify-between rounded-3xl px-3 py-4 text-white h-[330px] lg:h-[400px]  overflow-hidden"
     >
     <div class="h-56 flex items-center justify-center">
       <img
@@ -189,15 +198,13 @@ const RenderCards = async (newData) => {
           ${createRatingStars(data[i].stars)}
         </div>
       </div>
-      <div class="flex items-center justify-between">
+      <div class="flex items-center justify-between mt-4">
         <h3 class="font-semibold text-xs md:text-xl">${data[i].price}$</h3>
-        <button
-          class="flex items-center gap-x-2 md:gap-x-4 px-2 py-1 text-sm rounded-xl text-black font-bold bg-white"
-        >
-          <span class="-mt-1
-           text-xs md:text-base"> Add To Cart </span>
-          <i class="fa-solid fa-cart-shopping text-xs m-0"></i>
-        </button>
+       <a
+                href="#"
+                class="bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400"
+                >Add To Cart</a
+              >
       </div>
     </div>
   `;
@@ -242,3 +249,4 @@ const removeOpenFromAll = () => {
       item.classList.toggle("selected", false);
     });
 };
+

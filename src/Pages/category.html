@@ -116,7 +116,7 @@
 
       </div>
   </header>
-    <main class="container">
+    <main class="container py-5">
       <div class="flex mt-8 lg:mt-20 justify-between items-center">
         <ul class="category_list hidden md:flex items-center gap-x-4">       
         </ul>
@@ -194,18 +194,55 @@
 >>>>>>> 7c720b8095cd4d31501b4b6759a736e0fbe75d0b
 =======
       <!-- this is the pagination -->
-      <div class="pagination  w-fit ">
-        <ul>
-            <li onclick="prevPage()" class="chevron fas fa-chevron-left  inline-block   cursor-pointer w-7 h-7 text-center align-middle transition-all duration-600 ease-in-out text-lg font-extrabold border-0 bg-transparent" value="previues"></li>
-            <li onclick="activePage()" class="selected inline-block bg-white border-2 border-[#040418] rounded-full cursor-pointer w-7 h-7 text-center align-middle transition-all duration-600 ease-in-out" value="1">1</li>
-            <li onclick="activePage()" class="inline-block border-2 bg-white border-[#040418] rounded-full cursor-pointer w-7 h-7 text-center align-middle transition-all duration-600 ease-in-out" value="2">2</li>
-            <li onclick="activePage()" class="inline-block  border-2 bg-white border-[#040418]  rounded-full cursor-pointer w-7 h-7 text-center align-middle transition-all duration-600 ease-in-out" value="3" >3</li>
-            <li onclick="nextPage()" class="chevron fas fa-chevron-right inline-block   cursor-pointer w-7 h-7 text-center align-middle transition-all duration-600 ease-in-out text-lg font-extrabold border-0 bg-transparent " value="next"></li>
-        </ul>
+      <div class="pagination  w-fit bg-white rounded-lg py-2 ">
     </div>
       <!-- end of pagination -->
 
 >>>>>>> 6d585c672c68447db9f3f1675be0277c9ed3c65d
     </main>
+
+    <footer class="bg-[#22262D]">
+      <div
+        class="container flex justify-around items-center p-8 flex-col md:flex-row"
+      >
+        <img
+          class="w-40 pb-12 "
+          src="../Assets/Images/Black_White_Minimal_Simple_Modern_Creative_Studio_Ego_Logo-removebg-preview.png"
+          alt="logo"
+        />
+        <div class="h-40 w-1 bg-white hidden sm:block">
+
+        </div>
+
+        <div class="flex gap-12 text-white md:flex-row">
+          <div class="mb-4">
+            <h1 class="text-xl font-medium pb-2">Quick Links</h1>
+            <ul>
+              <a href="./index.html"><li class="pb-1 hover:underline transition-all duration-400 hover:cursor-pointer">Home</li></a>
+              <a href="./promotion.html"><li class="pb-1 hover:underline transition-all duration-400 hover:cursor-pointer">Promotions</li></a>
+              <a href="./category.html"><li class="pb-1 hover:underline transition-all duration-400 hover:cursor-pointer">Categorys</li></a>
+              <a href="./contact.html"><li class="pb-1 hover:underline transition-all duration-400 hover:cursor-pointer">Contact Us</li></a>
+            </ul>
+          </div>
+
+          <div class="h-40 w-1 bg-white sm:hidden">
+
+          </div>
+
+
+          <div class="mb-4">
+            <h1 class="text-xl font-medium pb-2">Social Media</h1>
+            <ul>
+              <a href="#"><li class="pb-1 hover:underline transition-all duration-400 hover:cursor-pointer"><i class="fa-brands fa-facebook pr-2"></i>Facebook</li></a>
+              <a href="#"><li class="pb-1 hover:underline transition-all duration-400 hover:cursor-pointer"><i class="fa-brands fa-instagram pr-2"></i>Instagram</li></a>
+              <a href="#"><li class="pb-1 hover:underline transition-all duration-400 hover:cursor-pointer"><i class="fa-brands fa-twitter pr-2"></i>Twitter</li></a>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="text-white flex justify-end text-xs p-4">
+        2024 Codeshogun. All rights reserved
+      </p>
+    </footer>
   </body>
 </html>
