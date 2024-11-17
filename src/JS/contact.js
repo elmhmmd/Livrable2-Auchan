@@ -1,3 +1,25 @@
+// Fonction pour remplir automatiquement les champs du formulaire avec l'API RandomUser
+function fillForm() {
+  const apiUrl = "https://randomuser.me/api/";
+
+  fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+          // Récupérer les données du premier utilisateur
+          const user = data.results[0];
+
+          // Remplir les champs du formulaire
+          document.getElementById("name").value = `${user.name.first} ${user.name.last}`;
+          document.getElementById("email").value = user.email;
+          document.getElementById("phone").value = user.phone || user.cell;
+          document.getElementById("message").value = `Hello, I am ${user.name.first}. I live in ${user.location.city}, ${user.location.country}.`;
+      })
+      .catch(error => {
+          console.error("Erreur lors de la récupération des données de l'API:", error);
+          alert("Une erreur s'est produite lors du remplissage automatique. Veuillez réessayer.");
+      });
+}
+
 // Fonction pour vider le formulaire
 function clearForm() {
   document.getElementById("name").value = "";
@@ -7,64 +29,38 @@ function clearForm() {
 }
 
 // Fonction pour valider le formulaire
-function validateForm() {
-  let isValid = true; // Initialiser à vrai
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Empêche l'envoi par défaut du formulaire
 
-  // Récupération 
   const name = document.getElementById("name");
   const email = document.getElementById("email");
   const phone = document.getElementById("phone");
   const message = document.getElementById("message");
 
-  //  add Regex
-  const nameRegex = /^[a-zA-Z\s]+$/; // Lettres et espaces
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Format email simple
-  const phoneRegex = /^[0-9]{10,}$/; // Minimum 10 chiffres
+  let isValid = true;
 
-  // Validation Nom
-  if (!name.value.trim() || !nameRegex.test(name.value)) {
-    name.style.borderColor = "red";
-    isValid = false;
-} else {
-    name.style.borderColor = ""; // Réinitialisation
-}
+  if (!name.value.trim()) {
+      alert("Veuillez entrer votre nom complet.");
+      isValid = false;
+  }
 
-// Validation Email
-if (!email.value.trim() || !emailRegex.test(email.value)) {
-    email.style.borderColor = "red";
-    isValid = false;
-} else {
-    email.style.borderColor = "";
-}
+  if (!email.value.trim()) {
+      alert("Veuillez entrer votre adresse email.");
+      isValid = false;
+  }
 
-// Validation Téléphone
-if (!phone.value.trim() || !phoneRegex.test(phone.value)) {
-    phone.style.borderColor = "red";
-    isValid = false;
-} else {
-    phone.style.borderColor = "";
-}
+  if (!phone.value.trim()) {
+      alert("Veuillez entrer votre numéro de téléphone.");
+      isValid = false;
+  }
 
-// Validation Message
-if (!message.value.trim()) {
-    message.style.borderColor = "red";
-    isValid = false;
-} else {
-    message.style.borderColor = "";
-}
+  if (!message.value.trim()) {
+      alert("Veuillez entrer votre message.");
+      isValid = false;
+  }
 
-return isValid;
-}
-
-// soumission du formulaire
-document.getElementById("contactForm").addEventListener("submit", function (event) {
-  event.preventDefault(); // Empêcher la soumission par défaut
-
-  // Vérifier si le formulaire est valide
-  if (validateForm()) {
+  if (isValid) {
       alert("Votre message a été envoyé avec succès !");
-      clearForm(); // Vider le formulaire après soumission
-  } else {
-      alert("Veuillez remplir tous les champs correctement.");
+      clearForm();
   }
 });
