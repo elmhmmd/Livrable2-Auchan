@@ -63,7 +63,6 @@ const RenderCards = async (newData) => {
   categoriesCont.innerHTML = "";
 
   data.map((ele) => {
-    console.log(`${ele.image}`)
     categoriesCont.innerHTML += `
       <div
         class="card product w-full  flex-col justify-between rounded-3xl px-3 py-4 text-white h-[330px] lg:h-[400px] overflow-hidden"
@@ -101,7 +100,8 @@ const RenderCards = async (newData) => {
     RenderListCat();
   }
 
-  cardsPerPage = 8;
+  cardsPerPage= 8;
+  dynamicPagination(data)
   displayCards();
 
 };
@@ -144,18 +144,21 @@ const removeOpenFromAll = () => {
 
 
 //  ==> start of pagination section
-let pagesindex = document.querySelector(".pagination").querySelectorAll("li")
-
+let pagesindex;
 let currentPage = 1;
-let numberPages = 3;
-let cardsPerPage = 8;
+let numberPages;
+let cardsPerPage;
 
 function activePage() {
-    pagesindex.forEach((l, index) => {
+  console.log(pagesindex);
+    pagesindex.forEach((l) => {
+      console.log(l.innerHTML )
         if (l.value == currentPage) {
+            console.log(l.value )
             l.classList.remove("selected")
         }
     });
+
     event.target.classList.add("selected")
     currentPage= event.target.value;
     
@@ -211,7 +214,6 @@ function displayCards() {
         if ((index >= start) && (index <= end)) {
           item.classList.remove("hidden");
           item.classList.add("flex");
-            // item.style.display = 'flex'
         } else {
           item.classList.remove("flex");
           item.classList.add("hidden");
@@ -265,18 +267,40 @@ const toList = async () => {
 
     `;
   });
+  cardsPerPage= 4;
+  dynamicPagination(data)
   displayCards();
 
 };
 // ==> End the function that display product in list 
 
-// here goes the event listner to switche from list to grid 
-// const display_list =document.querySelector(".display_list")
-// const display_grid =document.querySelector(".display_grid")
+// Start of Dynamic Pagination Function
 
-// display_grid.addEventListener("click",RenderCards());
-// display_list.addEventListener("click",toList())
+const dynamicPagination = (data)=> {
 
-// end of event listner to switche from list to grid 
- 
+  numberPages = Math.ceil((data.length)/cardsPerPage);
+
+  let pagination = document.querySelector(".pagination");
+  let list = document.createElement("ul");
+  list.classList.add("flex" , "items-center")
+
+  list.innerHTML = `<li onclick="prevPage()" class="chevron fas fa-chevron-left  inline-block  py-[5px] cursor-pointer w-7 h-7 text-center align-middle transition-all duration-600 ease-in-out text-lg font-extrabold border-0 bg-transparent" value="previous"></li>`
+  for (let i = 1; i <= numberPages; i++) {
+    if (i == currentPage) {
+      list.innerHTML += `<li onclick="activePage()" class="selected inline-block border-2 bg-white border-[#040418] rounded-full cursor-pointer w-7 h-7 text-center align-middle transition-all duration-600 ease-in-out" value="${i}">${i}</li>`
+      
+    } else{
+      list.innerHTML += `<li onclick="activePage()" class="inline-block border-2 bg-white border-[#040418] rounded-full cursor-pointer w-7 h-7 text-center align-middle transition-all duration-600 ease-in-out" value="${i}">${i}</li>`
+    }
+  }
+  list.innerHTML += `<li onclick="nextPage()" class="chevron fas fa-chevron-right inline-block  py-[5px] cursor-pointer w-7 h-7 text-center align-middle transition-all duration-600 ease-in-out text-lg font-extrabold border-0 bg-transparent " value="next"></li>`
+
+  pagination.innerHTML = ` `;
+  pagination.appendChild(list)
+
+  pagesindex = document.querySelector(".pagination").querySelectorAll("li")
+
+}
+// End of Dynamic Pagination Function
+
 

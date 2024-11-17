@@ -19,7 +19,7 @@ const RenderCards = async () => {
     data = response.products;
   
     // Set innerHTML to empty string before loop
-    promo_items.innerHTML = "";
+    // promo_items.innerHTML = "";
   
         promo_items.innerHTML += `
               <div class="grid grid-cols-3  p-8 grid-rows-2 gap-4 sm:grid-cols-4 ">
