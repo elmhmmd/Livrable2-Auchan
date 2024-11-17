@@ -180,14 +180,14 @@ let currentPage = 1;
 let numberPages = 4;
 let cardsPerPage = 8;
 
-function activePage() {
+function activePage(event) {
     pagesindex.forEach((l) => {
-        if (l.value == currentPage) {
+        if (l.dataset.value == currentPage) {
             l.classList.remove("selected")
         }
     });
     event.target.classList.add("selected")
-    currentPage= event.target.value;
+    currentPage= event.target.dataset.value;
     console.log(currentPage)
     displayCards();
 
@@ -197,14 +197,14 @@ function prevPage() {
 
     if (currentPage > 1) {
         pagesindex.forEach((l) => {
-            if (l.value == currentPage) {
+            if (l.dataset.value == currentPage) {
                 l.classList.remove("selected")
             }
         });
 
         currentPage--;
         pagesindex.forEach((l) => {
-            if (l.value == currentPage) {
+            if (l.dataset.value == currentPage) {
                 l.classList.add("selected")
             }
         });
@@ -215,14 +215,14 @@ function nextPage() {
 
     if (currentPage < numberPages) {
         pagesindex.forEach((l) => {
-            if (l.value == currentPage) {
+            if (l.dataset.value== currentPage) {
                 l.classList.remove("selected")
             }
         });
 
         currentPage++;
         pagesindex.forEach((l) => {
-            if (l.value == currentPage) {
+            if (l.dataset.value == currentPage) {
                 l.classList.add("selected")
             }
         });

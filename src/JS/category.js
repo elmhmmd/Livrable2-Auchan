@@ -149,18 +149,15 @@ let currentPage = 1;
 let numberPages;
 let cardsPerPage;
 
-function activePage() {
-  console.log(pagesindex);
+function activePage(event) {
     pagesindex.forEach((l) => {
-      console.log(l.innerHTML )
-        if (l.value == currentPage) {
-            console.log(l.value )
+        if (l.dataset.value == currentPage) {
             l.classList.remove("selected")
         }
     });
 
     event.target.classList.add("selected")
-    currentPage= event.target.value;
+    currentPage= event.target.dataset.value;
     
     displayCards(); 
 }
@@ -169,14 +166,14 @@ function prevPage() {
 
     if (currentPage > 1) {
         pagesindex.forEach((l) => {
-            if (l.value == currentPage) {
+            if (l.dataset.value == currentPage) {
                 l.classList.remove("selected")
             }
         });
 
         currentPage--;
         pagesindex.forEach((l) => {
-            if (l.value == currentPage) {
+            if (l.dataset.value == currentPage) {
                 l.classList.add("selected")
             }
         });
@@ -187,14 +184,14 @@ function nextPage() {
 
     if (currentPage < numberPages) {
         pagesindex.forEach((l) => {
-            if (l.value == currentPage) {
+            if (l.dataset.value == currentPage) {
                 l.classList.remove("selected")
             }
         });
 
         currentPage++;
         pagesindex.forEach((l) => {
-            if (l.value == currentPage) {
+            if (l.dataset.value == currentPage) {
                 l.classList.add("selected")
             }
         });
@@ -284,16 +281,16 @@ const dynamicPagination = (data)=> {
   let list = document.createElement("ul");
   list.classList.add("flex" , "items-center")
 
-  list.innerHTML = `<li onclick="prevPage()" class="chevron fas fa-chevron-left  inline-block  py-[5px] cursor-pointer w-7 h-7 text-center align-middle transition-all duration-600 ease-in-out text-lg font-extrabold border-0 bg-transparent" value="previous"></li>`
+  list.innerHTML = `<li onclick="prevPage()" class="chevron fas fa-chevron-left  inline-block  py-[5px] cursor-pointer w-7 h-7 text-center align-middle transition-all duration-600 ease-in-out text-lg font-extrabold border-0 bg-transparent" data-value="previous"></li>`
   for (let i = 1; i <= numberPages; i++) {
     if (i == currentPage) {
-      list.innerHTML += `<li onclick="activePage()" class="selected inline-block border-2 bg-white border-[#040418] rounded-full cursor-pointer w-7 h-7 text-center align-middle transition-all duration-600 ease-in-out" value="${i}">${i}</li>`
+      list.innerHTML += `<li onclick="activePage(event)" class="selected inline-block border-2 bg-white border-[#040418] rounded-full cursor-pointer w-7 h-7 text-center align-middle transition-all duration-600 ease-in-out" data-value="${i}">${i}</li>`
       
     } else{
-      list.innerHTML += `<li onclick="activePage()" class="inline-block border-2 bg-white border-[#040418] rounded-full cursor-pointer w-7 h-7 text-center align-middle transition-all duration-600 ease-in-out" value="${i}">${i}</li>`
+      list.innerHTML += `<li onclick="activePage(event)" class="inline-block border-2 bg-white border-[#040418] rounded-full cursor-pointer w-7 h-7 text-center align-middle transition-all duration-600 ease-in-out" data-value="${i}">${i}</li>`
     }
   }
-  list.innerHTML += `<li onclick="nextPage()" class="chevron fas fa-chevron-right inline-block  py-[5px] cursor-pointer w-7 h-7 text-center align-middle transition-all duration-600 ease-in-out text-lg font-extrabold border-0 bg-transparent " value="next"></li>`
+  list.innerHTML += `<li onclick="nextPage()" class="chevron fas fa-chevron-right inline-block  py-[5px] cursor-pointer w-7 h-7 text-center align-middle transition-all duration-600 ease-in-out text-lg font-extrabold border-0 bg-transparent " data-value="next"></li>`
 
   pagination.innerHTML = ` `;
   pagination.appendChild(list)
