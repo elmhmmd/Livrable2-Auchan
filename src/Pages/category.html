@@ -8,6 +8,7 @@
     <title>Document</title>
     <script src="../JS/script.js" defer></script>
     <script src="../JS/category.js" defer></script>
+    <script src="../JS/cart.js" defer></script>
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -107,11 +108,21 @@
 
         <!-- Right Section (Notification, Cart, Wallet, Profile) -->
         <div class="flex gap-4 items-center sm:mt-0">
-          <div class="header-tools gap-4">
+          <!--<div class="header-tools gap-4">
             <i class="ri-notification-fill text-xl cursor-pointer"></i>
             <i class="ri-shopping-cart-line text-xl cursor-pointer"></i>
             <p class="wallet text-sm">$0.00</p>
-          </div>
+          </div>-->
+          <div class="header-tools gap-4">
+  <i class="ri-notification-fill text-xl cursor-pointer"></i>
+  <div class="relative">
+    <i class="ri-shopping-cart-line text-xl cursor-pointer"></i>
+    <span
+       class="cart-count absolute top-[-5px] right-[-5px] bg-red-500 text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center hidden"
+    >0</span>
+  </div>
+  <p class="wallet cart-total text-sm">$0.00</p>
+</div>
 
           <div
             class="burger-icon h-5 w-7 flex flex-col justify-between cursor-pointer"
@@ -176,7 +187,7 @@
           <div class="flex items-center justify-between">
             <h3 class="font-semibold text-xl">30$</h3>
             <button
-              class="flex items-center gap-x-4 px-3 py-1 rounded-md text-black font-bold bg-white"
+              class="flex items-center gap-x-4 px-3 py-1 rounded-md text-black font-bold bg-white"  data-product-id="1"
             >
               <span class="-mt-1"> Add To Cart </span>
 

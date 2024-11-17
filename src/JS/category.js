@@ -40,8 +40,8 @@ const RenderCards = async () => {
         <div class="flex items-center justify-between">
           <h3 class="font-semibold text-xs md:text-xl">${ele.price}$</h3>
           <button
-            class="flex items-center gap-x-2 md:gap-x-4 px-2 py-1 text-sm rounded-md text-black font-bold bg-white"
-          >
+            class="add-to-cart-btn flex items-center gap-x-2 md:gap-x-4 px-2 py-1 text-sm rounded-md text-black font-bold bg-white"
+          data-product-id="${ele.id}">
             <span class="-mt-1
              text-xs md:text-base"> Add To Cart </span>
             <i class="fa-solid fa-cart-shopping text-xs m-0"></i>
