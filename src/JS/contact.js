@@ -10,4 +10,8 @@ function clearForm() {
 function validateForm() {
   let isValid = true; // Initialiser à vrai
 
-  
+  // Récupération 
+  const name = document.getElementById("name");
+  const email = document.getElementById("email");
+  const phone = document.getElementById("phone");
+  const message = document.getElementById("message");
