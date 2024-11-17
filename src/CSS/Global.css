@@ -20,6 +20,21 @@
   }
 }
 
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .my-container {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
 /* start header */
 .header-tools {
   display: flex;
@@ -35,7 +50,7 @@
       display: none;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 770px) {
  .header-tools {
   display: none;
  }

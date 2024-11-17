@@ -1,205 +1,880 @@
 <!DOCTYPE html>
 <html lang="EN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TWIZZLE</title>
-    <link rel="stylesheet" href="./CSS/index.css">
-    <link rel="stylesheet" href="./CSS/output.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
-</head>
-<body class="bg-[#D7D8E3]">
-
-
+    <link rel="stylesheet" href="../CSS/index.css" />
+    <link rel="stylesheet" href="../CSS/output.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-[#D7D8E3]">
     <!-- header -->
-    <header class="bg-[#22262D] pt-2 px-4 ">
-
-        <div class="nav-links left-[-100%] p-8 p gap-12 text-white flex flex-col absolute top-0 h-screen w-full bg-black/65 backdrop-blur-sm   transition-all duration-1000 ease-in-out ">
-            <div class="  flex items-center gap-4 pr-12  "> 
-                <div class=" profile-img w-[2.5rem] h-[2.5rem] rounded-full overflow-hidden">
-                    <img class="h-full w-full object-cover" src="./Assets/Images/Profile_picture.jpg" alt="Profile">
-                </div>
-                <i class="ri-notification-fill text-xl cursor-pointer"></i>
-                <i class="ri-shopping-cart-line text-xl cursor-pointer"></i>
-                <p class="wallet text-sm">$0.00</p>
-                <i  class="  close-icon  fa-regular fa-circle-xmark ml-auto text-3xl cursor-pointer"></i>
-                
-            </div>
-
-            <ul class="flex flex-col font-bold text-lg  w-fit  justify-center sm:justify-start gap-6 sm:gap-8  ">
-                <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500">Home</li>
-                <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500">Categories</li>
-                <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500">Promotions</li>
-                <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500">Contact us</li>
-            </ul>
-
+    <header class="bg-[#22262D] pt-2 px-4">
+      <div
+        class="nav-links left-[-100%] p-8 p gap-12 text-white flex flex-col absolute top-0 h-screen w-full bg-black/65 backdrop-blur-sm transition-all duration-1000 ease-in-out"
+      >
+        <div class="flex items-center gap-4 pr-12">
+          <div
+            class="profile-img w-[2.5rem] h-[2.5rem] rounded-full overflow-hidden"
+          >
+            <img
+              class="h-full w-full object-cover"
+              src="./Assets/Images/Profile_picture.jpg"
+              alt="Profile"
+            />
+          </div>
+          <i class="ri-notification-fill text-xl cursor-pointer"></i>
+          <i class="ri-shopping-cart-line text-xl cursor-pointer"></i>
+          <p class="wallet text-sm">$0.00</p>
+          <i
+            class="close-icon fa-regular fa-circle-xmark ml-auto text-3xl cursor-pointer"
+          ></i>
         </div>
 
-        <div class="container    flex flex-wrap justify-between items-center text-white p-4"> 
-                    <!-- Logo -->
+        <ul
+          class="flex flex-col font-bold text-lg w-fit justify-center sm:justify-start gap-6 sm:gap-8"
+        >
+          <li
+            class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
+          >
+            Home
+          </li>
+          <li
+            class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
+          >
+            Categories
+          </li>
+          <li
+            class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
+          >
+            Promotions
+          </li>
+          <li
+            class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
+          >
+            Contact us
+          </li>
+        </ul>
+      </div>
+
+      <div
+        class="container flex flex-wrap justify-between items-center text-white p-4"
+      >
+        <!-- Logo -->
         <div class="max-w-[120px] mb-4 sm:mb-0">
-            <img src="./Assets/Images/Black_White_Minimal_Simple_Modern_Creative_Studio_Ego_Logo-removebg-preview.png" alt="Logo">
+          <img
+            src="../Assets/Images/Black_White_Minimal_Simple_Modern_Creative_Studio_Ego_Logo-removebg-preview.png"
+            alt="Logo"
+          />
         </div>
 
         <!-- Navigation -->
-        <nav class="w-full sm:w-auto links ">
-            <ul class="flex justify-center sm:justify-start gap-6 sm:gap-8 text-sm w-full">
-                <li class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500">Home</li>
-                <li class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500">Categories</li>
-                <li class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500">Promotions</li>
-                <li class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500">Contact us</li>
-            </ul>
+        <nav class="w-full sm:w-auto links">
+          <ul
+            class="flex justify-center sm:justify-start gap-6 sm:gap-8 text-sm w-full"
+          >
+            <li
+              class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
+            >
+              Home
+            </li>
+            <li
+              class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
+            >
+              Categories
+            </li>
+            <li
+              class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
+            >
+              Promotions
+            </li>
+            <li
+              class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500"
+            >
+              Contact us
+            </li>
+          </ul>
         </nav>
 
         <!-- Right Section (Notification, Cart, Wallet, Profile) -->
-        <div class="flex gap-4 items-center  sm:mt-0">
-            <div class=" header-tools gap-4 "> 
-                <i class="ri-notification-fill text-xl cursor-pointer"></i>
-                <i class="ri-shopping-cart-line text-xl cursor-pointer"></i>
-                <p class="wallet text-sm">$0.00</p>
-            </div>
+        <div class="flex gap-4 items-center sm:mt-0">
+          <div class="header-tools gap-4">
+            <i class="ri-notification-fill text-xl cursor-pointer"></i>
+            <i class="ri-shopping-cart-line text-xl cursor-pointer"></i>
+            <p class="wallet text-sm">$0.00</p>
+          </div>
 
-            <div class="burger-icon h-5 w-7 flex flex-col justify-between cursor-pointer ">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        
-            <div class=" profile-img w-[2.5rem] h-[2.5rem] rounded-full overflow-hidden">
-                <img class="h-full w-full object-cover" src="./Assets/Images/Profile_picture.jpg" alt="Profile">
-            </div>
-        </div>
-        
+          <div
+            class="burger-icon h-5 w-7 flex flex-col justify-between cursor-pointer"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
 
+          <div
+            class="profile-img w-[2.5rem] h-[2.5rem] rounded-full overflow-hidden"
+          >
+            <img
+              class="h-full w-full object-cover"
+              src="../Assets/Images/Profile_picture.jpg"
+              alt="Profile"
+            />
+          </div>
         </div>
+      </div>
     </header>
-  
 
     <!-- Slider Section -->
-    <section class="mainSlider overflow-x-hidden relative flex justify-center  mb-12">
-     
-        <div class="slider-container flex  sm:px-20   sm:mt-4   transition-transform duration-3000 ease-in-out">
-            
-            
-            <!-- Slide 1 -->
-            <div class="sliderOne  min-w-full p-8 bg-cover flex  justify-around items-center  text-white sm:rounded-3xl sm:flex-row">
-                <div class="info w-5/6 lg:w-3/5">
-                    <h1 class="text-xl font-bold pb-1 lg:text-4xl lg:pb-2">Lighting Deals</h1>
-                    <h3 class="text-sm font-medium lg:text-2xl lg:pb-2">Black hoodie</h3>
-                    <p class="text-xs w-84 text-[#D7D8E3] lg:text-lg lg:w-11/12">Stay connected and on track with our sleek smartwatch. Get notifications, monitor your fitness, and enjoy all-day comfort. Built for both style and performance, it’s your ultimate tech companion wherever life takes you.</p>
-                    <p class="mt-1 pb-1 text-[#D7D8E3] lg:text-lg lg:pb-4">20$</p>
-                    <a href="#" class="bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400 lg:px-4 lg:py-2 lg:text-sm">Add To Cart</a>
-                </div>
-                <div>
-                    <img class=" w-48 sm:w-48" src="./Assets/Images/png-transparent-apple-watch-smartwatch-wearable-technology-apple-products-electronics-gadget-company-removebg-preview.png" alt="appleWatch">
-                </div>
-            </div>
-    
-            <!-- Slide 2 -->
-            <div class="sliderOne  min-w-full p-8 bg-cover flex  justify-around items-center  text-white sm:rounded-3xl sm:flex-row">
-                <div class="info w-5/6 lg:w-3/5">
-                    <h1 class="text-xl font-bold pb-1 lg:text-4xl lg:pb-2">Lighting Deals</h1>
-                    <h3 class="text-sm font-medium lg:text-2xl lg:pb-2">Black hoodie</h3>
-                    <p class="text-xs w-84 text-[#D7D8E3] lg:text-lg lg:w-11/12">Stay connected and on track with our sleek smartwatch. Get notifications, monitor your fitness, and enjoy all-day comfort. Built for both style and performance, it’s your ultimate tech companion wherever life takes you.</p>
-                    <p class="mt-1 pb-1 text-[#D7D8E3] lg:text-lg lg:pb-4">20$</p>
-                    <a href="#" class="bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400 lg:px-4 lg:py-2 lg:text-sm">Add To Cart</a>
-                </div>
-                <div>
-                    <img class=" w-48 sm:w-48" src="./Assets/Images/pngegg (3).png" alt="appleWatch">
-                </div>
-            </div>
-    
-            <!-- Slide 3 -->
-            <div class="sliderOne min-w-full p-8 bg-cover flex  justify-around items-center text-white sm:rounded-3xl sm:flex-row">
-                <div class="info w-5/6 lg:w-3/5">
-                    <h1 class="text-xl font-bold pb-1 lg:text-4xl lg:pb-2">Lighting Deals</h1>
-                    <h3 class="text-sm font-medium lg:text-2xl lg:pb-2">Smart Watch</h3>
-                    <p class="text-xs text-[#D7D8E3] w-84 lg:text-lg lg:w-11/12">Stay connected and on track with our sleek smartwatch. Get notifications, monitor your fitness, and enjoy all-day comfort. Built for both style and performance, it’s your ultimate tech companion wherever life takes you.</p>
-                    <p class="mt-1 text-[#D7D8E3] pb-1 lg:text-lg lg:pb-4">20$</p>
-                    <a href="#" class="bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400 lg:px-4 lg:py-2 lg:text-sm">Add To Cart</a>
-                </div>
-                <div>
-                    <img class=" w-48 sm:w-48" src="./Assets/Images/pngegg (2).png" alt="appleWatch">
-                </div>
-            </div>
-    
+    <section
+      class="mainSlider overflow-x-hidden relative flex justify-center mb-12"
+    >
+      <div
+        class="slider-container flex sm:px-20 sm:mt-4 transition-transform duration-3000 ease-in-out"
+      >
+        <!-- Slide 1 -->
+        <div
+          class="sliderOne min-w-full p-8 bg-cover flex justify-around items-center text-white sm:rounded-3xl sm:flex-row"
+        >
+          <div class="info w-5/6 lg:w-3/5">
+            <h1 class="text-xl font-bold pb-1 lg:text-4xl lg:pb-2">
+              Lighting Deals
+            </h1>
+            <h3 class="text-sm font-medium lg:text-2xl lg:pb-2">
+              Black hoodie
+            </h3>
+            <p class="text-xs w-84 text-[#D7D8E3] lg:text-lg lg:w-11/12">
+              Stay connected and on track with our sleek smartwatch. Get
+              notifications, monitor your fitness, and enjoy all-day comfort.
+              Built for both style and performance, it’s your ultimate tech
+              companion wherever life takes you.
+            </p>
+            <p class="mt-1 pb-1 text-[#D7D8E3] lg:text-lg lg:pb-4">20$</p>
+            <a
+              href="#"
+              class="bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400 lg:px-4 lg:py-2 lg:text-sm"
+              >Add To Cart</a
+            >
+          </div>
+          <div>
+            <img
+              class="w-48 sm:w-48"
+              src="../Assets/Images/png-transparent-apple-watch-smartwatch-wearable-technology-apple-products-electronics-gadget-company-removebg-preview.png"
+              alt="appleWatch"
+            />
+          </div>
         </div>
 
-        <div class="hidden sm:block ">
-             <i id="prev" class="fa-solid fa-chevron-left absolute left-8 top-1/2 transform -translate-y-1/2 text-black text-4xl "></i>
-             <i id="next" class=" fa-solid fa-chevron-right absolute right-8 top-1/2 transform -translate-y-1/2 text-black text-4xl  "></i>
-        </div>      
+        <!-- Slide 2 -->
+        <div
+          class="sliderOne min-w-full p-8 bg-cover flex justify-around items-center text-white sm:rounded-3xl sm:flex-row"
+        >
+          <div class="info w-5/6 lg:w-3/5">
+            <h1 class="text-xl font-bold pb-1 lg:text-4xl lg:pb-2">
+              Lighting Deals
+            </h1>
+            <h3 class="text-sm font-medium lg:text-2xl lg:pb-2">
+              Black hoodie
+            </h3>
+            <p class="text-xs w-84 text-[#D7D8E3] lg:text-lg lg:w-11/12">
+              Stay connected and on track with our sleek smartwatch. Get
+              notifications, monitor your fitness, and enjoy all-day comfort.
+              Built for both style and performance, it’s your ultimate tech
+              companion wherever life takes you.
+            </p>
+            <p class="mt-1 pb-1 text-[#D7D8E3] lg:text-lg lg:pb-4">20$</p>
+            <a
+              href="#"
+              class="bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400 lg:px-4 lg:py-2 lg:text-sm"
+              >Add To Cart</a
+            >
+          </div>
+          <div>
+            <img
+              class="w-48 sm:w-48"
+              src="../Assets/Images/pngegg (3).png"
+              alt="appleWatch"
+            />
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div
+          class="sliderOne min-w-full p-8 bg-cover flex justify-around items-center text-white sm:rounded-3xl sm:flex-row"
+        >
+          <div class="info w-5/6 lg:w-3/5">
+            <h1 class="text-xl font-bold pb-1 lg:text-4xl lg:pb-2">
+              Lighting Deals
+            </h1>
+            <h3 class="text-sm font-medium lg:text-2xl lg:pb-2">Smart Watch</h3>
+            <p class="text-xs text-[#D7D8E3] w-84 lg:text-lg lg:w-11/12">
+              Stay connected and on track with our sleek smartwatch. Get
+              notifications, monitor your fitness, and enjoy all-day comfort.
+              Built for both style and performance, it’s your ultimate tech
+              companion wherever life takes you.
+            </p>
+            <p class="mt-1 text-[#D7D8E3] pb-1 lg:text-lg lg:pb-4">20$</p>
+            <a
+              href="#"
+              class="bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400 lg:px-4 lg:py-2 lg:text-sm"
+              >Add To Cart</a
+            >
+          </div>
+          <div>
+            <img
+              class="w-48 sm:w-48"
+              src="../Assets/Images/pngegg (2).png"
+              alt="appleWatch"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden sm:block">
+        <i
+          id="prev"
+          class="fa-solid fa-chevron-left absolute left-8 top-1/2 transform -translate-y-1/2 text-black text-4xl"
+        ></i>
+        <i
+          id="next"
+          class="fa-solid fa-chevron-right absolute right-8 top-1/2 transform -translate-y-1/2 text-black text-4xl"
+        ></i>
+      </div>
     </section>
 
     <!-- line -->
     <div class="relative">
-        <hr class="border-t-2 border-black w-11/12 mx-auto">
-        <h3 class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center bg-[#D7D8E3] px-2">Trending Products</h3>
-    </div> 
- 
+      <hr class="border-t-2 border-black w-11/12 mx-auto" />
+      <h3
+        class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center bg-[#D7D8E3] px-2"
+      >
+        Trending Products
+      </h3>
+    </div>
+    <!-- line -->
 
     <!-- Trending Product Section -->
-    <section class="grid-section sm:ml-24 h-96 mt-12 mb-16 grid grid-cols-2 sm:grid-cols-12 gap-4 px-4  sm:grid-rows-2">
-         
-          
-            <div class="topProducts bg-cover bg-center sm:col-span-3 sm:row-span-2  bg-black sm:rounded-tl-3xl 
-            sm:rounded-bl-3xl"></div>
-            
-           
-            <div class="topProducts bg-cover bg-center sm:col-span-5  bg-black ">
-                
+
+    <section class="topProductSection">
+      <div class="grid-container">
+        <div
+          id="grid-section1"
+          class="grid-section sm:ml-24 h-auto mt-12 mb-4 grid grid-cols-2 sm:grid-cols-12 gap-4 px-4 sm:grid-rows-2"
+        >
+          <div
+            class="topProducts bg-cover px-2 py-4 flex flex-col justify-between bg-center sm:col-span-3 sm:row-span-2 sm:rounded-tl-3xl sm:rounded-bl-3xl rounded-2xl"
+          >
+            <img
+              class="w-32 sm:w-40 self-center"
+              src="/src/Assets/Images/casque.png"
+              alt="#"
+            />
+            <h3 class="text-white self-start text-sm font-medium lg:text-2xl">
+              Black Casque
+            </h3>
+            <p class="text-xs text-[#D7D8E3] w-84 sm:text-base">
+              Casque d'écoute pour microphone pour ordinateur portable
+              Bluetooth, ordinateur portable, électronique, microphone.
+            </p>
+            <div class="flex justify-between items-center">
+              <p class="text-[#D7D8E3]">15$</p>
+              <a
+                href="#"
+                class="bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400"
+                >Add To Cart</a
+              >
             </div>
-            
-         
-            <div class="topProducts bg-cover bg-center sm:col-span-3  bg-black sm:rounded-tr-3xl"></div>
-    
-          
-            <div class="topProducts bg-cover bg-center sm:col-span-3  bg-black"></div>
-    
-      
-            <div class="topProducts bg-cover bg-center sm:col-span-5  bg-black 
-            sm:rounded-br-3xl"></div>
-            
-            <div class="topProducts bg-cover bg-center sm:hidden sm:col-span-5  bg-black 
-            sm:rounded-br-3xl"></div>
-            
+          </div>
 
-    </section>
-    
+          <div
+            class="topProducts bg-cover px-2 py-4 bg-center flex flex-col sm:col-span-5 bg-black rounded-2xl sm:flex-row"
+          >
+            <img
+              class="w-32 sm:w-40 self-center"
+              src="/src/Assets/Images/casque.png"
+              alt="#"
+            />
 
-
-    <footer class="bg-[#22262D] ">
-        <div class="container flex justify-around items-center p-8 flex-col md:flex-row">
-            <img class="w-40 pb-12 " src="./Assets/Images/Black_White_Minimal_Simple_Modern_Creative_Studio_Ego_Logo-removebg-preview.png" alt="logo">
-            <div class="flex gap-32 text-white md:flex-row">
-                <div class="mb-4 ">
-                    <h1 class="text-xl font-medium pb-2">Quick Links</h1>
-                    <ul>
-                        <li class="pb-1">Home</li>
-                        <li class="pb-1">Promotions</li>
-                        <li class="pb-1">Categorys</li>
-                        <li class="pb-1">Contact Us</li>
-                    </ul>
-                </div>
-                <div class="mb-4">
-                    <h1 class="text-xl font-medium pb-2">Social Media</h1>
-                    <ul>
-                        <li class="pb-1">Facebook</li>
-                        <li class="pb-1">Instagram</li>
-                        <li class="pb-1">Twitter</li>
-                    </ul>
-                </div>
+            <div class="flex flex-col gap-12 justify-between px-2">
+              <div>
+                <h3
+                  class="text-white self-start text-sm font-medium sm:text-xl"
+                >
+                  Black Vase
+                </h3>
+                <p class="text-xs text-[#D7D8E3] w-84 sm:text-base">
+                  Florero, Ceramic small vase, retro, flower Vase
+                </p>
+              </div>
+              <div class="flex justify-between items-center">
+                <p class="mt-1 text-[#D7D8E3] pb-1 lg:text-lg lg:pb-4">15$</p>
+                <a
+                  href="#"
+                  class="bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400 lg:px-4"
+                  >Add To Cart</a
+                >
+              </div>
             </div>
+          </div>
+
+          <div
+            class="topProducts bg-cover bg-center flex flex-col justify-between py-4 px-2 rounded-2xl sm:col-span-3 bg-black sm:rounded-tr-3xl"
+          >
+            *
+
+            <img
+              class="w-32 sm:w-32 self-center"
+              src="/src/Assets/Images/casque.png"
+              alt="#"
+            />
+
+            <div class="sm:flex sm:items-center sm:justify-between sm:flex-col">
+              <h3 class="text-white self-start text-sm font-medium">
+                Fruits combo
+              </h3>
+              <p class="text-xs text-[#D7D8E3] w-84 sm:text-base sm:hidden">
+                Casque d'écoute pour microphone pour ordinateur portable
+                Bluetooth, ordinateur portable, électronique, microphone
+              </p>
+
+              <div class="flex justify-between sm:gap-28">
+                <p class="mt-1 text-[#D7D8E3]">15$</p>
+                <a
+                  href="#"
+                  class="bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400"
+                  >Add To Cart</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="topProducts bg-cover bg-center flex flex-col justify-between py-4 px-2 rounded-2xl sm:col-span-3 bg-black sm:rounded-tr-3xl"
+          >
+            *
+
+            <img
+              class="w-32 sm:w-32 self-center"
+              src="/src/Assets/Images/casque.png"
+              alt="#"
+            />
+
+            <div class="sm:flex sm:items-center sm:justify-between sm:flex-col">
+              <h3 class="text-white self-start text-sm font-medium">
+                Fruits combo
+              </h3>
+              <p class="text-xs text-[#D7D8E3] w-84 sm:text-base sm:hidden">
+                Casque d'écoute pour microphone pour ordinateur portable
+                Bluetooth, ordinateur portable, électronique, microphone
+              </p>
+
+              <div class="flex justify-between sm:gap-28">
+                <p class="mt-1 text-[#D7D8E3]">15$</p>
+                <a
+                  href="#"
+                  class="bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400"
+                  >Add To Cart</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="topProducts bg-cover px-2 py-4 bg-center flex flex-col sm:col-span-5 bg-black rounded-2xl sm:flex-row"
+          >
+            <img
+              class="w-32 sm:w-40 self-center"
+              src="/src/Assets/Images/casque.png"
+              alt="#"
+            />
+
+            <div class="flex flex-col gap-12 justify-between px-2">
+              <div>
+                <h3
+                  class="text-white self-start text-sm font-medium sm:text-xl"
+                >
+                  Black Vase
+                </h3>
+                <p class="text-xs text-[#D7D8E3] w-84 sm:text-base">
+                  Florero, Ceramic small vase, retro, flower Vase
+                </p>
+              </div>
+              <div class="flex justify-between items-center">
+                <p class="mt-1 text-[#D7D8E3] pb-1 lg:text-lg lg:pb-4">15$</p>
+                <a
+                  href="#"
+                  class="bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400 lg:px-4"
+                  >Add To Cart</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
-        <p class="text-white flex justify-end text-xs p-4">2024 Codeshogun. All rights reserved </p>
-    </footer>
-    
-    
-<script src="./JS/index.js"></script>
 
-</body>
-</html>
+        <div
+          id="grid-section2"
+          class="grid-section sm:ml-24 h-auto mt-12 mb-4 grid grid-cols-2 sm:grid-cols-12 gap-4 px-4 sm:grid-rows-2"
+        >
+          <div
+            class="topProducts bg-cover px-2 py-4 flex flex-col justify-between bg-center sm:col-span-3 sm:row-span-2 sm:rounded-tl-3xl sm:rounded-bl-3xl rounded-2xl"
+          >
+            <img
+              class="w-32 sm:w-40 self-center"
+              src="/src/Assets/Images/casque.png"
+              alt="#"
+            />
+            <h3 class="text-white self-start text-sm font-medium lg:text-2xl">
+              Houssam
+            </h3>
+            <p class="text-xs text-[#D7D8E3] w-84 sm:text-base">
+              Casque d'écoute pour microphone pour ordinateur portable
+              Bluetooth, ordinateur portable, électronique, microphone.
+            </p>
+            <div class="flex justify-between items-center">
+              <p class="text-[#D7D8E3]">15$</p>
+              <a
+                href="#"
+                class="bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400"
+                >Add To Cart</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="topProducts bg-cover px-2 py-4 bg-center flex flex-col sm:col-span-5 bg-black rounded-2xl sm:flex-row"
+          >
+            <img
+              class="w-32 sm:w-40 self-center"
+              src="/src/Assets/Images/casque.png"
+              alt="#"
+            />
+
+            <div class="flex flex-col gap-12 justify-between px-2">
+              <div>
+                <h3
+                  class="text-white self-start text-sm font-medium sm:text-xl"
+                >
+                  Black Vase
+                </h3>
+                <p class="text-xs text-[#D7D8E3] w-84 sm:text-base">
+                  Florero, Ceramic small vase, retro, flower Vase
+                </p>
+              </div>
+              <div class="flex justify-between items-center">
+                <p class="mt-1 text-[#D7D8E3] pb-1 lg:text-lg lg:pb-4">15$</p>
+                <a
+                  href="#"
+                  class="bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400 lg:px-4"
+                  >Add To Cart</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="topProducts bg-cover bg-center flex flex-col justify-between py-4 px-2 rounded-2xl sm:col-span-3 bg-black sm:rounded-tr-3xl"
+          >
+            *
+
+            <img
+              class="w-32 sm:w-32 self-center"
+              src="/src/Assets/Images/casque.png"
+              alt="#"
+            />
+
+            <div class="sm:flex sm:items-center sm:justify-between sm:flex-col">
+              <h3 class="text-white self-start text-sm font-medium">
+                Fruits combo
+              </h3>
+              <p class="text-xs text-[#D7D8E3] w-84 sm:text-base sm:hidden">
+                Casque d'écoute pour microphone pour ordinateur portable
+                Bluetooth, ordinateur portable, électronique, microphone
+              </p>
+
+              <div class="flex justify-between sm:gap-28">
+                <p class="mt-1 text-[#D7D8E3]">15$</p>
+                <a
+                  href="#"
+                  class="bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400"
+                  >Add To Cart</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="topProducts bg-cover bg-center flex flex-col justify-between py-4 px-2 rounded-2xl sm:col-span-3 bg-black sm:rounded-tr-3xl"
+          >
+            *
+
+            <img
+              class="w-32 sm:w-32 self-center"
+              src="/src/Assets/Images/casque.png"
+              alt="#"
+            />
+
+            <div class="sm:flex sm:items-center sm:justify-between sm:flex-col">
+              <h3 class="text-white self-start text-sm font-medium">
+                Fruits combo
+              </h3>
+              <p class="text-xs text-[#D7D8E3] w-84 sm:text-base sm:hidden">
+                Casque d'écoute pour microphone pour ordinateur portable
+                Bluetooth, ordinateur portable, électronique, microphone
+              </p>
+
+              <div class="flex justify-between sm:gap-28">
+                <p class="mt-1 text-[#D7D8E3]">15$</p>
+                <a
+                  href="#"
+                  class="bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400"
+                  >Add To Cart</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="topProducts bg-cover px-2 py-4 bg-center flex flex-col sm:col-span-5 bg-black rounded-2xl sm:flex-row"
+          >
+            <img
+              class="w-32 sm:w-40 self-center"
+              src="/src/Assets/Images/casque.png"
+              alt="#"
+            />
+
+            <div class="flex flex-col gap-12 justify-between px-2">
+              <div>
+                <h3
+                  class="text-white self-start text-sm font-medium sm:text-xl"
+                >
+                  Black Vase
+                </h3>
+                <p class="text-xs text-[#D7D8E3] w-84 sm:text-base">
+                  Florero, Ceramic small vase, retro, flower Vase
+                </p>
+              </div>
+              <div class="flex justify-between items-center">
+                <p class="mt-1 text-[#D7D8E3] pb-1 lg:text-lg lg:pb-4">15$</p>
+                <a
+                  href="#"
+                  class="bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400 lg:px-4"
+                  >Add To Cart</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="grid-section3"
+          class="grid-section sm:ml-24 h-auto mt-12 mb-4 grid grid-cols-2 sm:grid-cols-12 gap-4 px-4 sm:grid-rows-2"
+        >
+          <div
+            class="topProducts bg-cover px-2 py-4 flex flex-col justify-between bg-center sm:col-span-3 sm:row-span-2 sm:rounded-tl-3xl sm:rounded-bl-3xl rounded-2xl"
+          >
+            <img
+              class="w-32 sm:w-40 self-center"
+              src="/src/Assets/Images/casque.png"
+              alt="#"
+            />
+            <h3 class="text-white self-start text-sm font-medium lg:text-2xl">
+              Abderahman
+            </h3>
+            <p class="text-xs text-[#D7D8E3] w-84 sm:text-base">
+              Casque d'écoute pour microphone pour ordinateur portable
+              Bluetooth, ordinateur portable, électronique, microphone.
+            </p>
+            <div class="flex justify-between items-center">
+              <p class="text-[#D7D8E3]">15$</p>
+              <a
+                href="#"
+                class="bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400"
+                >Add To Cart</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="topProducts bg-cover px-2 py-4 bg-center flex flex-col sm:col-span-5 bg-black rounded-2xl sm:flex-row"
+          >
+            <img
+              class="w-32 sm:w-40 self-center"
+              src="/src/Assets/Images/casque.png"
+              alt="#"
+            />
+
+            <div class="flex flex-col gap-12 justify-between px-2">
+              <div>
+                <h3
+                  class="text-white self-start text-sm font-medium sm:text-xl"
+                >
+                  Black Vase
+                </h3>
+                <p class="text-xs text-[#D7D8E3] w-84 sm:text-base">
+                  Florero, Ceramic small vase, retro, flower Vase
+                </p>
+              </div>
+              <div class="flex justify-between items-center">
+                <p class="mt-1 text-[#D7D8E3] pb-1 lg:text-lg lg:pb-4">15$</p>
+                <a
+                  href="#"
+                  class="bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400 lg:px-4"
+                  >Add To Cart</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="topProducts bg-cover bg-center flex flex-col justify-between py-4 px-2 rounded-2xl sm:col-span-3 bg-black sm:rounded-tr-3xl"
+          >
+            *
+
+            <img
+              class="w-32 sm:w-32 self-center"
+              src="/src/Assets/Images/casque.png"
+              alt="#"
+            />
+
+            <div class="sm:flex sm:items-center sm:justify-between sm:flex-col">
+              <h3 class="text-white self-start text-sm font-medium">
+                Fruits combo
+              </h3>
+              <p class="text-xs text-[#D7D8E3] w-84 sm:text-base sm:hidden">
+                Casque d'écoute pour microphone pour ordinateur portable
+                Bluetooth, ordinateur portable, électronique, microphone
+              </p>
+
+              <div class="flex justify-between sm:gap-28">
+                <p class="mt-1 text-[#D7D8E3]">15$</p>
+                <a
+                  href="#"
+                  class="bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400"
+                  >Add To Cart</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="topProducts bg-cover bg-center flex flex-col justify-between py-4 px-2 rounded-2xl sm:col-span-3 bg-black sm:rounded-tr-3xl"
+          >
+            *
+
+            <img
+              class="w-32 sm:w-32 self-center"
+              src="/src/Assets/Images/casque.png"
+              alt="#"
+            />
+
+            <div class="sm:flex sm:items-center sm:justify-between sm:flex-col">
+              <h3 class="text-white self-start text-sm font-medium">
+                Fruits combo
+              </h3>
+              <p class="text-xs text-[#D7D8E3] w-84 sm:text-base sm:hidden">
+                Casque d'écoute pour microphone pour ordinateur portable
+                Bluetooth, ordinateur portable, électronique, microphone
+              </p>
+
+              <div class="flex justify-between sm:gap-28">
+                <p class="mt-1 text-[#D7D8E3]">15$</p>
+                <a
+                  href="#"
+                  class="bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400"
+                  >Add To Cart</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="topProducts bg-cover px-2 py-4 bg-center flex flex-col sm:col-span-5 bg-black rounded-2xl sm:flex-row"
+          >
+            <img
+              class="w-32 sm:w-40 self-center"
+              src="/src/Assets/Images/casque.png"
+              alt="#"
+            />
+
+            <div class="flex flex-col gap-12 justify-between px-2">
+              <div>
+                <h3
+                  class="text-white self-start text-sm font-medium sm:text-xl"
+                >
+                  Black Vase
+                </h3>
+                <p class="text-xs text-[#D7D8E3] w-84 sm:text-base">
+                  Florero, Ceramic small vase, retro, flower Vase
+                </p>
+              </div>
+              <div class="flex justify-between items-center">
+                <p class="mt-1 text-[#D7D8E3] pb-1 lg:text-lg lg:pb-4">15$</p>
+                <a
+                  href="#"
+                  class="bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400 lg:px-4"
+                  >Add To Cart</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pagination-buttons flex justify-center gap-3 mt-8 mb-12">
+        <button
+          id="page1"
+          class="pagination-btn rounded-full h-4 active bg-[#D7D8E3] border-black border-2 px-4 py-2 cursor-pointer"
+        ></button>
+        <button
+          id="page2"
+          class="pagination-btn rounded-full h-4 bg-[#D7D8E3] border-black border-2 px-4 py-2 cursor-pointer"
+        ></button>
+        <button
+          id="page3"
+          class="pagination-btn rounded-full h-4 bg-[#D7D8E3] border-black border-2 px-4 py-2 cursor-pointer"
+        ></button>
+      </div>
+    </section>
+
+    <div class="relative">
+        <hr class="border-t-2 border-black w-11/12 mx-auto" />
+        <h3
+          class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center bg-[#D7D8E3] px-2"
+        >
+          Trending Products
+        </h3>
+      </div>
+      <div class="container my-20">
+          <div class="flex mt-10 justify-between items-center">
+              <ul class="category_list hidden md:flex items-center gap-x-4">       
+              </ul>
+              <div class="w-fit relative">
+                <div
+                  onclick="openToggleFilterSelect()"
+                  class="filterSelect group rounded-md peer text-white cursor-pointer md:hidden px-2 w-36 py-2 flex items-center justify-between font-bold bg-black"
+                >
+                  Categories
+                  <i
+                    class="fa-solid fa-chevron-down rotate-0 transition group-open:rotate-180"
+                  ></i>
+                </div>
+      
+                <div
+                  class="w-52 transition absolute mt-2 flex-wrap hidden bg-white rounded-md peer-open:flex lg:peer-open:flex"
+                >
+                  <ul class="selectList w-full">
+                  </ul>
+                </div>
+              </div>
+            </div>
+          <div
+            class="categoriesContainer grid grid-cols-2 mt-8 lg:grid-cols-3 xl:grid-cols-4 gap-5 md:gap-x-10 lg:gap-x-20"
+          >
+          </div>
+          <div class="flex justify-center mt-6">
+                <button class="px-4 py-2 bg-[#22262D] text-white  rounded-lg ">
+                    <a href="./category.html">Show more</a>
+                </button>
+          </div>
+      </div>
     
+    <!-- line -->
+    <div class="relative">
+      <hr class="border-t-2 border-black w-11/12 mx-auto" />
+      <h3
+        class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center bg-[#D7D8E3] px-2"
+      >
+        Our Services
+      </h3>
+    </div>.
+
+    <section class="services mt-8 mb-8 sm:my-20">
+      <div class="flex flex-col items-start gap-8 px-4 sm:flex-row sm:justify-around">
+        <div class="flex justify-between items-center sm:flex-col">
+          <img class="w-12" src="../Assets/Icons/Vector (1).png" alt="icon" />
+          <div></div>
+          <h1 class="hidden sm:block font-bold text-xl sm:mt-2 mb-4">
+            Free Shippinng World wide
+          </h1>
+          <p class="text-sm sm:text-lg w-72 sm:text-center">
+            Stay connected and on track with our sleek smartwatch. Get
+            notifications, monitor your fitness, and enjoy all-day comfort.
+            Built for both style and performance, it’s your ultimate tech
+            companion wherever life takes you.
+          </p>
+        </div>
+        <div class="flex justify-between items-center sm:flex-col">
+          <img class="w-12" src="../Assets/Icons/Group.png" alt="icon" />
+          <h1 class="hidden sm:block font-bold text-xl sm:mt-2 mb-4">
+            24h/24h Customer Service
+          </h1>
+          <p class="text-sm sm:text-lg w-72 sm:text-center">
+            We’re here for you 24/7! Our Customer Service team is available
+            around the clock to answer your questions and assist with any needs.
+            Shop with confidence, knowing help is just a message away, any time
+            of day!
+          </p>
+        </div>
+        <div class="flex justify-between items-center sm:flex-col">
+          <img class="w-12" src="../Assets/Icons/Vector.png" alt="icon" />
+          <h1 class="hidden sm:block font-bold text-xl sm:mt-2 mb-4">
+            Monet Back Guarantee
+          </h1>
+          <p class="text-sm sm:text-lg w-72 sm:text-center">
+            Shop with peace of mind with our Money-Back Guarantee! If you're not
+            completely satisfied, we offer hassle-free returns and a full
+            refund. Your satisfaction is our priority!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-[#22262D]">
+      <div
+        class="container flex justify-around items-center p-8 flex-col md:flex-row"
+      >
+        <img
+          class="w-40 pb-12"
+          src="../Assets/Images/Black_White_Minimal_Simple_Modern_Creative_Studio_Ego_Logo-removebg-preview.png"
+          alt="logo"
+        />
+        <div class="flex gap-32 text-white md:flex-row">
+          <div class="mb-4">
+            <h1 class="text-xl font-medium pb-2">Quick Links</h1>
+            <ul>
+              <li class="pb-1">Home</li>
+              <li class="pb-1">Promotions</li>
+              <li class="pb-1">Categorys</li>
+              <li class="pb-1">Contact Us</li>
+            </ul>
+          </div>
+          <div class="mb-4">
+            <h1 class="text-xl font-medium pb-2">Social Media</h1>
+            <ul>
+              <li class="pb-1">Facebook</li>
+              <li class="pb-1">Instagram</li>
+              <li class="pb-1">Twitter</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="text-white flex justify-end text-xs p-4">
+        2024 Codeshogun. All rights reserved
+      </p>
+    </footer>
+
+    <script src="../JS/index.js"></script>
+  </body>
+</html>

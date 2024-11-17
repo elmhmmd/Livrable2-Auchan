@@ -33,8 +33,7 @@
     }
 }
 
-<<<<<<< HEAD
-=======
+
 /* End header */
 
 .sliderOne{
@@ -51,4 +50,12 @@
 }
 
 
->>>>>>> 7c720b8095cd4d31501b4b6759a736e0fbe75d0b
+
+
+.card {
+    background-image: url("../Assets/Images/card-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
