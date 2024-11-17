@@ -53,4 +53,9 @@
 
 
 
-  
+.card {
+    background-image: url("../Assets/Images/card-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
