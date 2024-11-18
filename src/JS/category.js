@@ -87,7 +87,11 @@ const RenderCards = async (newData) => {
           <h3 class="font-semibold text-xs md:text-xl">${ele.price}$</h3>
           <button
             class="add-to-cart-btn flex items-center gap-x-2 md:gap-x-4 px-2 py-1 text-sm rounded-md text-black font-bold bg-white"
-          data-product-id="${ele.id}">
+          data-product-id="${ele.id}"data-title="${ele.title}"
+            data-price="${ele.price}"
+            data-image="${ele.image}"
+            data-description="${ele.description || ''}"
+            data-size="S">
             <span class="-mt-1
              text-xs md:text-base"> Add To Cart </span>
             <i class="fa-solid fa-cart-shopping text-xs m-0"></i>
@@ -257,7 +261,12 @@ const toList = async () => {
               ${createRatingStars(ele.stars)}  
             </div>
             <p class="text-sm md:text-lg   sm:text-base ">${ele.description}</p>
-            <button class="flex mt-3 px-3 py-[3px] gap-[4px] items-center self-end  rounded-md text-black font-semibold  bg-white sm:text-lg ">
+            <button class="add-to-cart-btn flex mt-3 px-3 py-[3px] gap-[4px] items-center self-end  rounded-md text-black font-semibold  bg-white sm:text-lg" data-product-id="${ele.id}" data-title="${ele.title}"
+            data-price="${ele.price}"
+            data-image="${ele.image}" 
+            data-description="${ele.description || ''}"
+            data-size="S">
+              
               <span class=" text-sm sm:text-lg sm:font-bold"> Add To Cart </span>
               <i class="fa-solid fa-cart-shopping"></i> 
             </button>

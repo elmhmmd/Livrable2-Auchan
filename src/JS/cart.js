@@ -1,131 +1,74 @@
-const PRODUCTS_URL = "http://localhost:3000/products";
-const CART_URL = "http://localhost:3000/cart";
+const updateCartBadge = () => {
+  // Get the cart from localStorage and parse it
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  console.log("Cart:", cart);  // Log the cart to verify it exists
 
-// Cache product data and cart data
-let products = [];
-let cart = [];
+  // Calculate the total quantity by summing up all product quantities
+  const totalQuantity = cart.reduce((total, item) => total + (parseInt(item.quantity) || 0), 0);
+  console.log("Total Quantity:", totalQuantity);  // Log the total quantity
 
-// Utility to update the cart notification and price
-const updateCartUI = () => {
-  const cartCountElem = document.querySelector(".cart-count");
-  const cartTotalElem = document.querySelector(".cart-total");
+  // Get the cart badge element
+  const cartBadge = document.querySelector(".cart-count");
 
-  // Calculate the total quantity and price
-  const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
-  const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  // Update the badge's visibility and text content based on the quantity
+  if (cartBadge) {
+    if (totalQuantity > 0) {
+      cartBadge.textContent = totalQuantity;  // Set the total quantity in the badge
+      cartBadge.classList.remove("hidden");  // Make the badge visible
+    } else {
+      cartBadge.textContent = "0";  // Clear the badge if no items
+      cartBadge.classList.add("hidden");  // Hide the badge if quantity is 0
+    }
+  }
+};
 
-  // Update the UI elements
-  cartCountElem.textContent = totalQuantity;
-  cartTotalElem.textContent = `$${totalPrice.toFixed(2)}`;
 
-  // Show or hide the notification badge based on the quantity
-  if (totalQuantity > 0) {
-    cartCountElem.classList.remove("hidden");
+
+
+
+// Function to add product to localStorage
+const addToCart = (product) => {
+  // Get cart from localStorage or initialize an empty array
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  // Check if the product already exists in the cart
+  const existingProductIndex = cart.findIndex((item) => item.id === product.id);
+
+  if (existingProductIndex !== -1) {
+    // If the product exists, increment the quantity
+    cart[existingProductIndex].quantity += 1;
   } else {
-    cartCountElem.classList.add("hidden");
-  }
-};
-
-// Fetch and initialize cart data
-const fetchCart = async () => {
-  try {
-    const response = await fetch(CART_URL);
-    if (response.ok) {
-      cart = await response.json();
-      updateCartUI();
-    } else {
-      console.error("Failed to fetch cart data.");
-    }
-  } catch (error) {
-    console.error("Error fetching cart data:", error);
-  }
-};
-
-// Add product to the cart
-const addToCart = async (productId) => {
-  const product = products.find((item) => item.id === productId);
-  if (product) {
-    const existingItem = cart.find((item) => item.id === productId);
-
-    if (existingItem) {
-      // Update the quantity of the existing item
-      existingItem.quantity += 1;
-      try {
-        await fetch(`${CART_URL}/${existingItem.id}`, {
-          method: "PATCH",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ quantity: existingItem.quantity }),
-        });
-      } catch (error) {
-        console.error("Error updating cart item:", error);
-      }
-    } else {
-      // Add the new item to the cart
-      const newItem = { ...product, quantity: 1 };
-      cart.push(newItem);
-      try {
-        await fetch(CART_URL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(newItem),
-        });
-      } catch (error) {
-        console.error("Error adding new item to cart:", error);
-      }
-    }
-
-    updateCartUI();
-  }
-};
-
-// Render product cards
-const RenderCards = async () => {
-  const categoriesCont = document.querySelector(".categoriesContainer");
-
-  try {
-    const res = await fetch(PRODUCTS_URL);
-    products = await res.json();
-
-    categoriesCont.innerHTML = "";
-
-    products.forEach((product) => {
-      categoriesCont.innerHTML += `
-        <div class="card w-full flex flex-col justify-between rounded-3xl px-3 py-4 text-white h-[330px] lg:h-[400px] overflow-hidden">
-          <img
-            src="${product.image || "../Assets/Images/t-shirt-placeholder.png"}"
-            alt="${product.title}"
-            class="w-44 lg:w-52 mx-auto mt-4 rounded-md"
-          />
-          <div>
-            <h1 class="text-lg md:text-xl font-bold text-white mt-3">${product.title}</h1>
-            <p class="text-sm text-gray-300 mt-1">${product.description || ""}</p>
-          </div>
-          <div class="flex items-center justify-between">
-            <h3 class="font-semibold text-xs md:text-xl">${product.price}$</h3>
-            <button 
-              class="add-to-cart-btn flex items-center gap-x-2 md:gap-x-4 px-2 py-1 text-sm rounded-md text-black font-bold bg-white"
-              data-product-id="${product.id}">
-              <span class="-mt-1 text-xs md:text-base">Add To Cart</span>
-              <i class="fa-solid fa-cart-shopping text-xs m-0"></i>
-            </button>
-          </div>
-        </div>
-      `;
+    // If the product doesn't exist, add it to the cart
+    cart.push({ 
+      ...product, 
+      quantity: 1, 
+      size: 'S',  // Default size for all products
+      adjustedPrice: parseFloat(product.price) // Default adjusted price is base price
     });
-  } catch (error) {
-    console.error("Error fetching products:", error);
   }
+
+  // Store the updated cart in localStorage
+  localStorage.setItem("cart", JSON.stringify(cart));
+  console.log('Updated cart:', cart); // Debugging log
+  updateCartBadge();
 };
 
-// Event delegation for Add to Cart buttons
-document.addEventListener("click", (event) => {
-  if (event.target.closest(".add-to-cart-btn")) {
-    const button = event.target.closest(".add-to-cart-btn");
-    const productId = parseInt(button.getAttribute("data-product-id"));
-    addToCart(productId);
+// Listen for click events on "Add to Cart" buttons
+document.addEventListener('click', (event) => {
+  // Check if the clicked element is an "Add to Cart" button
+  if (event.target && event.target.classList.contains('add-to-cart-btn')) {
+    // Get product data from the button's data attributes
+    const product = {
+      id: event.target.getAttribute('data-product-id'),
+      title: event.target.getAttribute('data-title'),
+      price: event.target.getAttribute('data-price'),
+      image: event.target.getAttribute('data-image'),
+      description: event.target.getAttribute('data-description') || '', // Optional description
+    };
+
+    // Add the product to the cart
+    addToCart(product);
+
   }
 });
 
-// Initialize page
-RenderCards();
-fetchCart();

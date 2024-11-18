@@ -1,12 +1,4 @@
 node_modules
-<<<<<<< HEAD
-<<<<<<< HEAD
 ./CSS/output.css
 output.css 
-=======
-node_modules
-=======
->>>>>>> 6d585c672c68447db9f3f1675be0277c9ed3c65d
-./CSS/output.css
-output.css
->>>>>>> 7c720b8095cd4d31501b4b6759a736e0fbe75d0b
+
