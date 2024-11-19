@@ -16,33 +16,24 @@
 
     <header class="bg-[#22262D] pt-2 px-4 ">
 
-        <div class="nav-links left-[-100%] p-8 p gap-12 text-white flex flex-col absolute top-0 h-screen w-full bg-black/65 backdrop-blur-sm   transition-all duration-1000 ease-in-out ">
-            <div class="  flex items-center gap-4 pr-12  "> 
+        <div class="nav-links left-[-100%] p-8 p gap-12 z-20 text-white flex flex-col absolute top-0 h-screen w-full bg-black/65 backdrop-blur-sm   transition-all duration-1000 ease-in-out ">
+            <div class="  flex items-center gap-4   "> 
                 <div class=" profile-img w-[2.5rem] h-[2.5rem] rounded-full overflow-hidden">
                     <img class="h-full w-full object-cover" src="../Assets/Images/Profile_picture.jpg" alt="Profile">
                 </div>
                 <i class="ri-notification-fill text-xl cursor-pointer"></i>
-                <i class="ri-shopping-cart-line text-xl cursor-pointer"></i>
+                <a class="./Checkout.html"><i class="ri-shopping-cart-line text-xl cursor-pointer"></i></a>
                 <p class="wallet text-sm">$0.00</p>
-                <i  class="  close-icon  fa-regular fa-circle-xmark ml-auto text-3xl cursor-pointer"></i>
+                <i  class="  close-icon  fa-regular fa-circle-xmark ml-auto text-3xl text-[#D7D8E3] cursor-pointer"></i>
                 
             </div>
 
-           <ul class="flex flex-col font-bold text-lg w-fit justify-center sm:justify-start gap-6 sm:gap-8 text-sm">
-    <li class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500">
-        <a href="./index.html" class="block">Home</a>
-    </li>
-    <li class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500">
-        <a href="./category.html" class="block">Categories</a>
-    </li>
-    <li class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500">
-        <a href="./promotion.html" class="block">Promotions</a>
-    </li>
-    <li class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500">
-        <a href="./contact.html" class="block">Contact Us</a>
-    </li>
-</ul>
-
+            <ul class="flex flex-col font-semibold text-lg  w-fit  justify-center sm:justify-start gap-6 sm:gap-8  ">
+                <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500"><a href="../Pages/index.html">Home</a></li>
+                <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500"><a href="../Pages/category.html">Categories</a></li>
+                <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500"><a href="../Pages/promotion.html">Promotions</a></li>
+                <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500"> <a href="../Pages/contact.html">Contact us</a></li>
+            </ul>
 
         </div>
 
@@ -54,32 +45,23 @@
 
         <!-- Navigation -->
         <nav class="w-full sm:w-auto links ">
-           <ul class="flex justify-center sm:justify-start gap-6 sm:gap-8 text-sm w-full">
-    <li class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500">
-        <a href="index.html" class="block">Home</a>
-    </li>
-    <li class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500">
-        <a href="category.html" class="block">Categories</a>
-    </li>
-    <li class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500">
-        <a href="promotion.html" class="block">Promotions</a>
-    </li>
-    <li class="p-2 rounded-xl hover:bg-white hover:text-black transition duration-500">
-        <a href="contact.html" class="block">Contact Us</a>
-    </li>
-</ul>
-
+            <ul class="flex justify-center sm:justify-start gap-6 sm:gap-8 text-sm w-full">
+                <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500"><a href="../Pages/index.html">Home</a></li>
+                <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500"><a href="../Pages/category.html">Categories</a></li>
+                <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500"><a href="../Pages/promotion.html">Promotions</a></li>
+                <li class="p-2  rounded-xl hover:bg-white hover:text-black transition duration-500"> <a href="../Pages/contact.html">Contact us</a></li>
+            </ul>
         </nav>
 
         <!-- Right Section (Notification, Cart, Wallet, Profile) -->
         <div class="flex gap-4 items-center  sm:mt-0">
             <div class=" header-tools gap-4 "> 
                 <i class="ri-notification-fill text-xl cursor-pointer"></i>
-                <i class="ri-shopping-cart-line text-xl cursor-pointer"></i>
+                <a class="./Checkout.html"><i class="ri-shopping-cart-line text-xl cursor-pointer"></i></a>
                 <p class="wallet text-sm">$0.00</p>
             </div>
 
-            <div class="burger-icon h-5 w-7 flex flex-col justify-between cursor-pointer ">
+            <div class="burger-icon h-5 w-7  flex-col justify-between cursor-pointer ">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -95,43 +77,42 @@
     </header>
 
 <main class="flex-grow flex justify-center my-8">
-    <div class="bg-white rounded-lg p-8 w-[80%] max-w-6xl mx-auto flex flex-wrap md:flex-nowrap">
-        <!-- Cart Content (left side) -->
-        <div class="flex-1">
+    <div class="bg-white rounded-lg p-8 w-[80%] max-w-6xl mx-auto flex flex-col"> <!-- Changed to flex-col -->
+        <!-- Cart Content -->
+        <div class="flex-1 mb-8"> <!-- Added margin bottom -->
             <!-- Continue Shopping Link -->
-            <a href="#" class="flex items-center text-black font-bold mb-6">
+            <a href="./index.html" class="flex items-center text-black font-bold mb-6">
                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                 </svg>
                 Continue Shopping
             </a>
 
-    <!-- Shopping Cart Header -->
-
             <!-- Shopping Cart Header -->
             <h2 class="text-2xl font-bold mb-4">Shopping Cart</h2>
-                <div class="cart-container">
-    <!-- Cart items will be dynamically inserted here -->
-                </div>
+            <div class="cart-container">
+                <!-- Cart items will be dynamically inserted here -->
+            </div>
             <div class="cart-count"></div>
             <div class="total-price"></div>
+        </div>
 
-        <!-- Payment Buttons (right side) -->
-        <div class="w-full md:w-1/3 md:ml-8 space-y-4 mt-8 md:mt-0">
-            <button class="w-full bg-[#5469d4] text-white py-4 text-lg rounded-md">
-                Buy with Shop
+        <!-- Payment Buttons - Now centered and with more space -->
+        <div class="w-full max-w-md mx-auto space-y-4 mt-8 border-t pt-8">
+            <button class="w-full bg-[#5469d4] text-white py-4 text-lg rounded-md hover:bg-[#4559c4] transition-colors">
+                Pay with Shop Pay
             </button>
-            <button class="w-full bg-[#ffc439] text-black py-4 text-lg rounded-md">
-                Buy with PayPal
+            <button class="w-full bg-[#ffc439] text-black py-4 text-lg rounded-md hover:bg-[#ffb829] transition-colors">
+                Pay with PayPal
             </button>
-            <button class="w-full bg-black text-white py-4 text-lg rounded-md flex items-center justify-center">
-                <img src="google-pay.png" alt="Google Pay" class="h-6">
+            <button class="w-full bg-black text-white py-4 text-lg rounded-md hover:bg-gray-800 transition-colors flex items-center justify-center">
+                Google Pay
             </button>
-            <button class="w-full bg-[#ffd814] text-black py-4 text-lg rounded-md">
+            <button class="w-full bg-[#ffd814] text-black py-4 text-lg rounded-md hover:bg-[#ffc804] transition-colors">
                 Amazon Pay
             </button>
-            <button class="w-full bg-black text-white py-4 text-lg rounded-md flex items-center justify-center">
-                <img src="apple-pay.png" alt="Apple Pay" class="h-6">
+            <button class="w-full bg-black text-white py-4 text-lg rounded-md hover:bg-gray-800 transition-colors flex items-center justify-center">
+                Apple Pay
             </button>
         </div>
     </div>
