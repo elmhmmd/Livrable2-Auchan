@@ -6,6 +6,7 @@
     <title>TWIZZLE</title>
     <link rel="stylesheet" href="../CSS/index.css" />
     <link rel="stylesheet" href="../CSS/output.css" />
+    <script src="../JS/cart.js" defer></script>
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -64,7 +65,7 @@
       <div class="flex gap-4 items-center  sm:mt-0">
           <div class=" header-tools gap-4 "> 
               <i class="ri-notification-fill text-xl cursor-pointer"></i>
-              <a href="./Checkout.html"><i class="ri-shopping-cart-line text-xl cursor-pointer"></i></a>
+              <a href="./Checkout.html" class="relative"><i class="ri-shopping-cart-line text-xl cursor-pointer"></i><span class="cart-count absolute top-[-5px] right-[-5px] bg-red-500 text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">0</span></a>
               <p class="wallet text-sm">$0.00</p>
           </div>
 

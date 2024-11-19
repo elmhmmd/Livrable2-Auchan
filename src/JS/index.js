@@ -201,13 +201,7 @@ const RenderCards = async (newData) => {
       <div class="flex items-center justify-between mt-4">
         <h3 class="font-semibold text-xs md:text-xl">${data[i].price}$</h3>
           <button
-          class="add-to-cart-btn bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400"
-          data-product-id="${product.id || i}"
-          data-title="${product.title}"
-          data-price="${product.price}"
-          data-image="${product.image || "../Assets/Images/t-shirt-placeholder.png"}"
-          data-description="${product.description || ''}"
-        >
+          class="bg-white text-black text-xs px-2 py-1 rounded-xl font-medium hover:bg-transparent hover:text-white hover:border-2 hover:border-white transition duration-400">
           Add To Cart
         </button>
       </div>
