@@ -120,9 +120,10 @@ const removeCartItem = (id) => {
 };
 
 // Checkout Page Rendering
+
 const renderCheckoutCart = () => {
   const cartContainer = document.querySelector(".cart-container");
-  if (!cartContainer) return; // Not on checkout page
+  if (!cartContainer) return;
 
   const cart = getCart();
   
@@ -142,13 +143,10 @@ const renderCheckoutCart = () => {
   
   cartContainer.innerHTML = `
     <div class="mb-6 pb-4 border-b">
-      <div class="flex justify-between items-center">
-        <h2 class="text-xl font-semibold">Shopping Cart</h2>
-        <p class="text-gray-600">${quantity} items in your cart</p>
-      </div>
+      <h2 class="text-xl font-semibold">You have ${quantity} items in your cart</h2>
     </div>
     ${cart.map(item => `
-      <div class="product-card flex items-center justify-between border-b py-4" data-id="${item.id}">
+      <div class="product-card flex items-center justify-between py-4" data-id="${item.id}">
         <div class="flex items-center flex-1">
           <div class="w-24 h-24 rounded-lg overflow-hidden mr-6">
             <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover">
@@ -168,11 +166,11 @@ const renderCheckoutCart = () => {
               `<option value="${size}" ${item.size === size ? 'selected' : ''}>${size}</option>`
             ).join('')}
           </select>
-          <select class="quantity-select border rounded-lg px-3 py-2 bg-white" data-id="${item.id}">
-            ${Array.from({ length: 10 }, (_, i) => i + 1).map(num => 
-              `<option value="${num}" ${item.quantity === num ? 'selected' : ''}>${num}</option>`
-            ).join('')}
-          </select>
+          <div class="flex items-center border rounded-lg">
+            <button class="quantity-minus px-3 py-2 text-gray-600 hover:bg-gray-100" data-id="${item.id}">-</button>
+            <span class="quantity-display px-3 py-2">${item.quantity}</span>
+            <button class="quantity-plus px-3 py-2 text-gray-600 hover:bg-gray-100" data-id="${item.id}">+</button>
+          </div>
           <button class="remove-item text-gray-400 hover:text-red-500 transition-colors p-2" data-id="${item.id}">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
@@ -182,13 +180,9 @@ const renderCheckoutCart = () => {
         </div>
       </div>
     `).join('')}
-    <div class="mt-6 pt-4 border-t">
+    <div class="mt-6 pt-4">
       <div class="flex justify-end">
         <div class="w-72">
-          <div class="flex justify-between items-center mb-2">
-            <span class="text-gray-600">Subtotal:</span>
-            <span class="font-medium">$${price.toFixed(2)}</span>
-          </div>
           <div class="flex justify-between items-center text-lg">
             <span class="text-gray-900 font-medium">Total:</span>
             <span class="text-xl font-bold">$${price.toFixed(2)}</span>
@@ -198,22 +192,32 @@ const renderCheckoutCart = () => {
     </div>
   `;
 
-  // Add event listeners for checkout page controls
+  // Update event listeners for quantity controls
+  cartContainer.addEventListener('click', (e) => {
+    const target = e.target;
+    const id = target.dataset.id;
+    
+    if (target.classList.contains('quantity-plus')) {
+      const item = cart.find(item => item.id === id);
+      if (item) {
+        updateCartItem(id, { quantity: (parseInt(item.quantity) || 0) + 1 });
+      }
+    } else if (target.classList.contains('quantity-minus')) {
+      const item = cart.find(item => item.id === id);
+      if (item && item.quantity > 1) {
+        updateCartItem(id, { quantity: (parseInt(item.quantity) || 0) - 1 });
+      }
+    } else if (target.closest('.remove-item')) {
+      removeCartItem(id);
+    }
+  });
+
   cartContainer.addEventListener('change', (e) => {
     const target = e.target;
     const id = target.dataset.id;
     
     if (target.classList.contains('size-select')) {
       updateCartItem(id, { size: target.value });
-    } else if (target.classList.contains('quantity-select')) {
-      updateCartItem(id, { quantity: parseInt(target.value) });
-    }
-  });
-
-  cartContainer.addEventListener('click', (e) => {
-    const removeButton = e.target.closest('.remove-item');
-    if (removeButton) {
-      removeCartItem(removeButton.dataset.id);
     }
   });
 };
