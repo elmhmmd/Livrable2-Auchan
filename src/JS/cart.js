@@ -1,4 +1,4 @@
-// Utility Functions
+
 const safeJSONParse = (str) => {
   try {
     return JSON.parse(str);
@@ -8,11 +8,11 @@ const safeJSONParse = (str) => {
   }
 };
 
-// Cart State Management
+
 const getCart = () => safeJSONParse(localStorage.getItem("cart"));
 const setCart = (cart) => localStorage.setItem("cart", JSON.stringify(cart));
 
-// Price Calculations
+
 const calculateAdjustedPrice = (basePrice, size) => {
   const sizeMultipliers = { 'S': 1, 'M': 1.05, 'L': 1.1, 'XL': 1.2 };
   return basePrice * (sizeMultipliers[size] || 1);
@@ -31,12 +31,12 @@ const calculateTotals = (cart) => {
   }, { quantity: 0, price: 0 });
 };
 
-// UI Updates
+
 const updateNavbarDisplays = () => {
   const cart = getCart();
   const { quantity, price } = calculateTotals(cart);
 
-  // Update cart badges
+
   document.querySelectorAll(".cart-count").forEach(badge => {
     if (badge) {
       badge.textContent = quantity;
@@ -44,7 +44,7 @@ const updateNavbarDisplays = () => {
     }
   });
 
-  // Update wallet displays
+  
   document.querySelectorAll(".wallet").forEach(element => {
     if (element) {
       element.textContent = `$${price.toFixed(2)}`;
@@ -52,7 +52,7 @@ const updateNavbarDisplays = () => {
   });
 };
 
-// Cart Item Management
+
 const addToCart = (product) => {
   if (!product?.id) {
     console.error("Invalid product data:", product);
@@ -75,7 +75,7 @@ const addToCart = (product) => {
 
   setCart(cart);
   updateNavbarDisplays();
-  renderCheckoutCart(); // Only updates if on checkout page
+  renderCheckoutCart(); 
 };
 
 const updateCartItem = (id, updates) => {
@@ -119,7 +119,7 @@ const removeCartItem = (id) => {
   }
 };
 
-// Checkout Page Rendering
+
 
 const renderCheckoutCart = () => {
   const cartContainer = document.querySelector(".cart-container");
@@ -192,7 +192,7 @@ const renderCheckoutCart = () => {
     </div>
   `;
 
-  // Update event listeners for quantity controls
+  
   cartContainer.addEventListener('click', (e) => {
     const target = e.target;
     const id = target.dataset.id;
@@ -222,7 +222,7 @@ const renderCheckoutCart = () => {
   });
 };
 
-// Event Handlers
+
 const handleAddToCart = (event) => {
   const button = event.target.closest('[data-product-id]');
   if (!button) return;
@@ -238,14 +238,14 @@ const handleAddToCart = (event) => {
   addToCart(product);
 };
 
-// Initialize
+
 document.addEventListener('DOMContentLoaded', () => {
   updateNavbarDisplays();
   renderCheckoutCart();
   document.addEventListener('click', handleAddToCart);
 });
 
-// Export necessary functions
+
 window.addToCart = addToCart;
 window.updateNavbarDisplays = updateNavbarDisplays;
 window.renderCheckoutCart = renderCheckoutCart;
